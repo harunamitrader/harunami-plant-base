@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>harunami Plant Base | 植物の基礎と庭木管理のノート</title>
-  <meta name="description" content="harunami Plant Base のトップページ。植物の基礎、庭木管理、剪定、植物生理を、図解つきの読み物として整理していく植物ノートサイト。">
+  <title>harunami Plant Base | 植物の読み物サイト</title>
+  <meta name="description" content="植物の基礎、庭木管理、剪定をやさしく整理していく harunami Plant Base の記事一覧ページ。">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='48' font-size='44'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
   <style>
     :root {
-      --ink: #1f3025;
-      --muted: #5d6d60;
-      --paper: rgba(255, 251, 243, 0.95);
-      --line: rgba(129, 115, 76, 0.16);
-      --green: #557f38;
-      --deep: #284832;
-      --gold: #c4932f;
-      --sand: #f3ebd8;
-      --shadow: 0 18px 42px rgba(68, 53, 18, 0.08);
-      --radius: 28px;
-      --max: 1160px;
+      --bg: #f7fbf8;
+      --paper: #ffffff;
+      --ink: #24312b;
+      --muted: #607067;
+      --line: #dde8e1;
+      --accent: #4f8a68;
+      --accent-soft: #edf7f1;
+      --warm: #fff4ea;
+      --shadow: 0 10px 30px rgba(61, 88, 72, 0.06);
+      --max: 860px;
+      --radius: 18px;
     }
 
     * { box-sizing: border-box; }
@@ -26,419 +26,211 @@
     body {
       margin: 0;
       color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(150, 204, 169, 0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(255, 214, 181, 0.18), transparent 20%),
+        var(--bg);
       font-family: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
       line-height: 1.8;
-      background:
-        radial-gradient(circle at top left, rgba(92, 140, 55, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(196, 147, 47, 0.14), transparent 24%),
-        linear-gradient(180deg, #f8f3e7 0%, #f1ead8 45%, #ece2cc 100%);
     }
 
-    img { display: block; max-width: 100%; height: auto; }
-    a { color: #1d5a69; }
-
-    h1, h2, h3 {
-      margin: 0;
-      line-height: 1.2;
-      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .wrap {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
     }
 
+    .site-header {
+      padding: 22px 0;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
     .hero {
-      padding: 44px 0 24px;
+      padding: 14px 0 20px;
     }
 
-    .hero-shell, .panel {
-      background: var(--paper);
+    .hero-box {
+      background: rgba(255, 255, 255, 0.82);
       border: 1px solid var(--line);
-      border-radius: calc(var(--radius) + 8px);
+      border-radius: 24px;
       box-shadow: var(--shadow);
-    }
-
-    .hero-shell {
-      position: relative;
-      overflow: hidden;
-      padding: 42px;
-      background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(247, 241, 228, 0.95)),
-        var(--paper);
-    }
-
-    .hero-shell::before,
-    .hero-shell::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 999px;
-      filter: blur(6px);
-      opacity: 0.4;
-      pointer-events: none;
-    }
-
-    .hero-shell::before {
-      top: -110px;
-      right: -70px;
-      background: radial-gradient(circle, rgba(85, 127, 56, 0.24), transparent 68%);
-    }
-
-    .hero-shell::after {
-      left: -90px;
-      bottom: -140px;
-      background: radial-gradient(circle, rgba(196, 147, 47, 0.2), transparent 68%);
+      padding: 32px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 14px;
+      display: inline-block;
+      padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(85, 127, 56, 0.12);
-      color: #3c5b27;
-      font-size: 0.92rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.84rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .brandline {
-      margin-top: 14px;
-      color: #5a7549;
-      font-size: 0.98rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
     }
 
     h1 {
-      margin-top: 18px;
-      font-size: clamp(2.5rem, 5vw, 4.7rem);
-      max-width: 8ch;
+      margin: 16px 0 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.25;
     }
 
     .lead {
-      margin: 18px 0 0;
-      max-width: 64rem;
-      font-size: 1.06rem;
-      color: #334038;
-    }
-
-    .jump, .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .jump {
-      margin-top: 20px;
-    }
-
-    .chip, .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 14px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .chip {
-      color: #304036;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(113, 104, 75, 0.16);
-    }
-
-    .hero-grid, .card-grid, .note-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .hero-grid {
-      grid-template-columns: 1.15fr 0.85fr;
-      margin-top: 26px;
-    }
-
-    .note-box, .page-card, .mini-card, .note-card {
-      padding: 22px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.88);
-    }
-
-    .note-box p, .mini-card p, .note-card p, .page-card p {
-      margin: 0;
-      color: #34423a;
-    }
-
-    .note-box p + p, .mini-card p + p, .note-card p + p, .page-card p + p {
-      margin-top: 10px;
+      margin: 16px 0 0;
+      max-width: 42rem;
+      color: var(--muted);
+      font-size: 1rem;
     }
 
     main {
-      padding-bottom: 66px;
+      padding-bottom: 56px;
     }
 
-    section {
-      margin-top: 28px;
-    }
-
-    .panel {
-      padding: 30px;
-    }
-
-    .section-head {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .kicker {
-      display: inline-block;
-      width: fit-content;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: #edf4e7;
-      color: #44622d;
+    .section-title {
+      margin: 26px 0 14px;
+      font-size: 1.12rem;
       font-weight: 700;
-      font-size: 0.86rem;
-      letter-spacing: 0.05em;
+      color: var(--accent);
     }
 
-    .card-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .article-list {
+      display: grid;
+      gap: 14px;
     }
 
-    .page-card {
-      overflow: hidden;
-      padding: 0;
+    .article-item {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
     }
 
-    .page-card a {
+    .article-item:hover {
+      transform: translateY(-2px);
+      border-color: #c9ddd0;
+      box-shadow: 0 16px 34px rgba(61, 88, 72, 0.09);
+    }
+
+    .article-link {
       display: block;
-      padding: 22px;
-      color: inherit;
-      text-decoration: none;
-      height: 100%;
+      padding: 24px;
     }
 
-    .page-card h3 {
-      font-size: 1.45rem;
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 12px;
-    }
-
-    .page-image {
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
-      background: #f6f0df;
-    }
-
-    .page-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
+      color: var(--muted);
+      font-size: 0.86rem;
     }
 
     .tag {
-      padding: 6px 10px;
-      font-size: 0.82rem;
-      background: #eef2e8;
-      color: #425943;
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--warm);
+      color: #8b644d;
+      font-weight: 700;
     }
 
-    .mini-wrap {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+    h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.45;
     }
 
-    .mini-card h3, .note-card h3 {
-      font-size: 1.24rem;
-      margin-bottom: 10px;
-    }
-
-    .note-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .article-link p {
+      margin: 10px 0 0;
+      color: var(--muted);
     }
 
     footer {
-      padding: 18px 0 52px;
-      color: #5f6f62;
-    }
-
-    @media (max-width: 940px) {
-      .hero-grid, .card-grid, .mini-wrap, .note-grid {
-        grid-template-columns: 1fr;
-      }
+      padding: 10px 0 40px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     @media (max-width: 640px) {
-      .wrap {
-        width: min(var(--max), calc(100% - 18px));
-      }
-
-      .hero-shell, .panel {
-        padding: 20px 18px;
-      }
-
-      h1 {
-        max-width: 7ch;
+      .hero-box,
+      .article-link {
+        padding: 22px;
       }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap hero-shell">
-      <div class="eyebrow">植物学 × 庭木管理 × 図解ノート</div>
-      <div class="brandline">harunami Plant Base</div>
-      <h1>植物の基礎と庭木管理のノート</h1>
-      <p class="lead">
-        harunami Plant Base は、植物の基礎知識を、庭木や果樹の管理へどう生かすかという観点で整理する小さな植物サイトです。
-        単なる用語集ではなく、時期ごとの作業、観察ポイント、失敗しやすい点まで、図解と本文でつなげていきます。
-      </p>
-      <div class="jump">
-        <a class="chip" href="#pages">公開ページ</a>
-        <a class="chip" href="#site-concept">このサイトについて</a>
-        <a class="chip" href="#next">今後のテーマ</a>
-      </div>
-      <div class="hero-grid">
-        <div class="note-box">
-          <p><strong>このサイトの使い方</strong></p>
-          <p>
-            まずは興味のあるテーマのページから読み始め、必要に応じて基礎ページと実践ページを往復すると理解しやすいです。
-            たとえば、剪定の理由が気になるときは植物ホルモンのページへ、具体的な作業手順を見たいときは樹種別ページへ進めます。
-          </p>
-        </div>
-        <div class="note-box">
-          <p><strong>現在の方向性</strong></p>
-          <p>1. 植物生理の基礎を、園芸管理へ落とし込んで説明する。</p>
-          <p>2. 黒松のように管理の難しい樹種は、時期別・手順別に切り分ける。</p>
-          <p>3. 図解は本文の補助に徹し、誤解しやすい部分は本文で補足する。</p>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./index.html">harunami Plant Base</a>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="pages" class="panel">
-      <div class="section-head">
-        <span class="kicker">Pages</span>
-        <h2>公開ページ</h2>
-        <p>
-          現在は、植物ホルモンの基礎ページと、黒松の剪定ガイドを公開しています。どちらも図解つきの読み物として構成しています。
+  <main class="container">
+    <section class="hero">
+      <div class="hero-box">
+        <span class="eyebrow">植物の読み物サイト</span>
+        <h1>植物の基礎と庭木管理を、順番に読める形でまとめる。</h1>
+        <p class="lead">
+          園芸や庭木管理で気になりやすいテーマを、専門用語を減らしながら整理していくサイトです。
+          トップページでは記事一覧だけをシンプルに並べ、各ページで上から順に読める構成にしています。
         </p>
       </div>
-      <div class="card-grid">
-        <article class="page-card">
-          <a href="./plant-hormones.html">
-            <div class="page-image">
-              <img src="./assets/plant-hormones-overview.svg" alt="図解で学ぶ植物ホルモン入門ページのイメージ">
-            </div>
-            <div class="tag-row" style="padding:22px 22px 0;">
+    </section>
+
+    <section>
+      <div class="section-title">記事一覧</div>
+      <div class="article-list">
+        <article class="article-item">
+          <a class="article-link" href="./plant-hormones.html">
+            <div class="meta">
               <span class="tag">植物生理</span>
-              <span class="tag">果樹・庭木</span>
               <span class="tag">初心者向け</span>
+              <span>2026-06-14 更新</span>
             </div>
-            <div style="padding:16px 22px 22px;">
-              <h3>はじめての植物ホルモン入門</h3>
-              <p>
-                案内役キャラクターと一緒に、5大植物ホルモンの働きと、
-                果樹・庭木の管理や剪定への生かし方をやさしく学べる読み物ページ。
-              </p>
-            </div>
+            <h2>はじめての植物ホルモン入門</h2>
+            <p>
+              5大植物ホルモンの基本と、果樹や庭木の管理・剪定にどう生かすかを、
+              図解を交えながらやさしく整理した入門ページです。
+            </p>
           </a>
         </article>
-        <article class="page-card">
-          <a href="./kuromatsu-pruning.html">
-            <div class="page-image">
-              <img src="./assets/kuromatsu-pruning-calendar.png" alt="黒松の剪定カレンダーの図解">
-            </div>
-            <div class="tag-row" style="padding:22px 22px 0;">
-              <span class="tag">樹種別ガイド</span>
+
+        <article class="article-item">
+          <a class="article-link" href="./kuromatsu-pruning.html">
+            <div class="meta">
+              <span class="tag">剪定</span>
               <span class="tag">黒松</span>
-              <span class="tag">剪定手順</span>
+              <span>2026-06-14 更新</span>
             </div>
-            <div style="padding:16px 22px 22px;">
-              <h3>黒松の剪定ガイド</h3>
-              <p>
-                春の芽数調整、初夏のみどり摘み、夏の養生、秋〜冬のもみあげと透かし剪定まで、
-                庭木・庭仕立ての黒松管理を時期別に詳しくまとめたページ。
-              </p>
-            </div>
+            <h2>黒松の剪定ガイド</h2>
+            <p>
+              春・初夏・夏・秋冬の時期ごとに、黒松の芽かき、みどり摘み、もみあげ、
+              透かし剪定の考え方と手順をまとめた実践ページです。
+            </p>
           </a>
-        </article>
-      </div>
-    </section>
-
-    <section id="site-concept" class="panel">
-      <div class="section-head">
-        <span class="kicker">Concept</span>
-        <h2>このサイトで大事にしたいこと</h2>
-        <p>
-          園芸の情報は、作業名だけが先に独り歩きしやすい一方で、なぜその時期にその作業をするのかが抜けがちです。
-          harunami Plant Base では、その背景までつなげて説明することを目指しています。
-        </p>
-      </div>
-      <div class="mini-wrap">
-        <article class="mini-card">
-          <h3>基礎と実践を分けすぎない</h3>
-          <p>
-            植物ホルモンや樹の生理を、実際の剪定や管理の判断へ結び付けて整理します。
-          </p>
-        </article>
-        <article class="mini-card">
-          <h3>図解は入り口、本文は補足</h3>
-          <p>
-            図だけで分かった気になるのを避けるため、図解は要点整理、本文は誤解しやすい部分の補足に使います。
-          </p>
-        </article>
-        <article class="mini-card">
-          <h3>家庭園芸で再現しやすく</h3>
-          <p>
-            専門家向けの高度な技術をそのまま持ち込まず、庭木・果樹として現実的な手順を優先します。
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="next" class="panel">
-      <div class="section-head">
-        <span class="kicker">Next Themes</span>
-        <h2>今後広げやすいテーマ</h2>
-        <p>
-          次のページ候補としては、松の仲間の比較、庭木の剪定時期一覧、植え付け後の水管理、花木と果樹の違いなどが相性のよいテーマです。
-        </p>
-      </div>
-      <div class="note-grid">
-        <article class="note-card">
-          <h3>樹種別の剪定ガイド</h3>
-          <p>
-            黒松のように時期や手順が分かりにくい樹種は、個別ページにすると役立ちやすいです。赤松、五葉松、梅、柑橘なども候補になります。
-          </p>
-        </article>
-        <article class="note-card">
-          <h3>管理判断の早見表</h3>
-          <p>
-            葉色、枝の勢い、落葉、徒長枝の出方など、見た目から判断する早見表を増やすと、実際の作業に結び付きやすくなります。
-          </p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>harunami Plant Base のトップページ。植物の基礎知識と、庭木・果樹の実践管理をつなぐ入口として運用します。</p>
+  <footer class="container">
+    植物の基礎と管理の知識を、少しずつ読み物として追加していきます。
   </footer>
 </body>
 </html>
