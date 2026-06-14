@@ -15,6 +15,8 @@ harunami Plant Base の GitHub Pages 用静的サイトです。
 ## ページ
 
 - `index.html`
+  harunami Plant Base のトップページ
+- `plant-hormones.html`
   5大植物ホルモンの基礎と果樹・庭木管理
 - `kuromatsu-pruning.html`
   黒松の剪定ガイド
