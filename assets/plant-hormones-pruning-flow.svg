@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1400" role="img" aria-labelledby="title desc">
+  <title id="title">植物ホルモンを管理と剪定に生かすインフォグラフィック</title>
+  <desc id="desc">若木、込み合い、徒長、弱りの4場面で、果樹と庭木それぞれの管理判断を整理した図。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffdf8"/>
+      <stop offset="100%" stop-color="#fff5ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#cfb7a3" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1400" rx="40" fill="url(#bg)"/>
+  <rect x="58" y="58" width="1484" height="1284" rx="34" fill="#fffdfa" stroke="#eedfd2"/>
+  <text x="98" y="128" fill="#8f5971" font-size="30" font-weight="700" font-family="'BIZ UDPGothic','Yu Gothic','Noto Sans JP',sans-serif">Care &amp; Pruning</text>
+  <text x="98" y="188" fill="#4f4137" font-size="58" font-weight="700" font-family="'Yu Mincho','Noto Serif JP',serif">切る前に「木がどう反応するか」を読む</text>
+  <text x="98" y="233" fill="#6d5b4e" font-size="28" font-family="'BIZ UDPGothic','Yu Gothic','Noto Sans JP',sans-serif">果樹は光と実つき、庭木は樹形と枝流れを重視するが、どちらも反応予測があると剪定が安定します。</text>
+  <g filter="url(#shadow)" font-family="'BIZ UDPGothic','Yu Gothic','Noto Sans JP',sans-serif">
+    <rect x="120" y="286" width="1360" height="100" rx="24" fill="#fff" stroke="#ecd9cb"/>
+    <text x="170" y="347" fill="#557f38" font-size="30" font-weight="700">場面を見分ける → 合図を読む → 管理を決める</text>
+    <text x="855" y="347" fill="#6d5b4e" font-size="24">若木 / 込み合い / 徒長 / 弱り の4場面で考える</text>
+
+    <rect x="120" y="430" width="1360" height="190" rx="28" fill="#fff" stroke="#ecd9cb"/>
+    <circle cx="182" cy="525" r="40" fill="#f4b8c7"/>
+    <text x="244" y="506" fill="#4f4137" font-size="34" font-weight="700">若木で枝数を増やしたい</text>
+    <text x="244" y="548" fill="#5d4d42" font-size="26">合図: 先端優勢が強い。切り戻しで脇芽を動かしやすい。</text>
+    <text x="244" y="586" fill="#5d4d42" font-size="26">果樹: 骨格枝を作る年だけ軽く切り戻す。</text>
+    <text x="244" y="618" fill="#5d4d42" font-size="26">庭木: 更新したい枝だけ短くして、枝配りを作る。</text>
+
+    <rect x="120" y="662" width="1360" height="190" rx="28" fill="#fff" stroke="#ecd9cb"/>
+    <circle cx="182" cy="757" r="40" fill="#a8d28a"/>
+    <text x="244" y="738" fill="#4f4137" font-size="34" font-weight="700">枝が込み合って中が暗い</text>
+    <text x="244" y="780" fill="#5d4d42" font-size="26">合図: 外側の芽ばかり動き、内部は弱りやすい。</text>
+    <text x="244" y="818" fill="#5d4d42" font-size="26">果樹: 結実枝を残しつつ間引いて光を入れる。</text>
+    <text x="244" y="850" fill="#5d4d42" font-size="26">庭木: 分岐点で不要枝を抜いて自然樹形を保つ。</text>
+
+    <rect x="120" y="894" width="1360" height="190" rx="28" fill="#fff" stroke="#ecd9cb"/>
+    <circle cx="182" cy="989" r="40" fill="#8cc8f1"/>
+    <text x="244" y="970" fill="#4f4137" font-size="34" font-weight="700">徒長枝が多くて暴れる</text>
+    <text x="244" y="1012" fill="#5d4d42" font-size="26">合図: 伸びる側が強い。強剪定と窒素過多で吹き返しが起きやすい。</text>
+    <text x="244" y="1050" fill="#5d4d42" font-size="26">果樹: 切り戻しを減らし、太枝の間引きに寄せる。</text>
+    <text x="244" y="1082" fill="#5d4d42" font-size="26">庭木: 刈り込み頻度を下げ、勢い枝だけ選んで抜く。</text>
+
+    <rect x="120" y="1126" width="1360" height="148" rx="28" fill="#fff6f7" stroke="#f0d4d9"/>
+    <circle cx="182" cy="1200" r="40" fill="#c7b1ea"/>
+    <text x="244" y="1186" fill="#4f4137" font-size="34" font-weight="700">芽吹き不良・葉が小さい・乾きやすい</text>
+    <text x="244" y="1228" fill="#5d4d42" font-size="26">合図: ABAが強く、根由来の後押しが弱い。</text>
+    <text x="244" y="1260" fill="#5d4d42" font-size="26">果樹も庭木も、強剪定より先に水・根・土を立て直す。</text>
+  </g>
+</svg>
