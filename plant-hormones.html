@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>harunami Plant Base | 5大植物ホルモンの基礎と果樹・庭木管理</title>
-  <meta name="description" content="5大植物ホルモンの基礎と、果樹・庭木の管理や剪定にどう生かすかを、図解と本文で整理した harunami Plant Base の植物学ページ。">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='48' font-size='44'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+  <title>harunami Plant Base | はじめての植物ホルモン入門</title>
+  <meta name="description" content="案内役のキャラクターと一緒に、5大植物ホルモンの働きと、果樹・庭木の管理や剪定への生かし方をやさしく学べる初心者向けページ。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='48' font-size='44'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
   <style>
     :root {
-      --bg: #f6f1e4;
-      --paper: #fffdf8;
-      --ink: #213226;
-      --muted: #5f6f62;
-      --line: #d8cdb3;
-      --green: #5c8f35;
-      --blue: #3b7bb2;
-      --teal: #1e8d88;
-      --orange: #dd7a11;
-      --gold: #d3a314;
-      --shadow: 0 18px 42px rgba(70, 55, 20, 0.08);
-      --radius: 28px;
+      --bg: #fff7ef;
+      --bg-soft: #fffdf9;
+      --ink: #4b3f36;
+      --muted: #76675b;
+      --line: rgba(153, 122, 94, 0.16);
+      --pink: #f4b8c7;
+      --pink-deep: #da7e97;
+      --green: #9fca7a;
+      --green-deep: #648d43;
+      --blue: #8cc8f1;
+      --yellow: #f6d57e;
+      --purple: #c7b1ea;
+      --cream: #fffaf2;
+      --shadow: 0 22px 50px rgba(158, 111, 88, 0.11);
+      --radius: 30px;
       --max: 1160px;
     }
 
@@ -33,17 +36,13 @@
 
     body {
       margin: 0;
-      font-family: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
       color: var(--ink);
+      font-family: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      line-height: 1.85;
       background:
-        radial-gradient(circle at top left, rgba(120, 150, 95, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(226, 180, 84, 0.14), transparent 24%),
-        linear-gradient(180deg, #f8f3e8 0%, #f2ecd9 42%, #efe7d3 100%);
-      line-height: 1.8;
-    }
-
-    a {
-      color: #1f5e6c;
+        radial-gradient(circle at top left, rgba(244, 184, 199, 0.32), transparent 24%),
+        radial-gradient(circle at top right, rgba(159, 202, 122, 0.25), transparent 25%),
+        linear-gradient(180deg, #fffaf3 0%, #fff4ea 46%, #fff8f0 100%);
     }
 
     img {
@@ -52,147 +51,219 @@
       height: auto;
     }
 
+    a {
+      color: #7c5d48;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      line-height: 1.2;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    }
+
     .wrap {
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
     }
 
     .hero {
-      padding: 56px 0 28px;
+      padding: 34px 0 24px;
+    }
+
+    .hero-shell,
+    .panel {
+      background: rgba(255, 252, 247, 0.94);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
     }
 
     .hero-shell {
       position: relative;
       overflow: hidden;
+      padding: 34px;
       background:
-        linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(247, 243, 232, 0.96)),
-        var(--paper);
-      border: 1px solid rgba(137, 117, 66, 0.16);
-      border-radius: calc(var(--radius) + 8px);
-      box-shadow: var(--shadow);
-      padding: 46px;
+        radial-gradient(circle at right top, rgba(244, 184, 199, 0.18), transparent 28%),
+        radial-gradient(circle at left bottom, rgba(159, 202, 122, 0.16), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 249, 241, 0.95));
     }
 
     .hero-shell::before,
     .hero-shell::after {
       content: "";
       position: absolute;
-      inset: auto;
-      width: 280px;
-      height: 280px;
       border-radius: 999px;
-      filter: blur(6px);
-      opacity: 0.4;
+      filter: blur(8px);
+      opacity: 0.45;
       pointer-events: none;
     }
 
     .hero-shell::before {
-      top: -110px;
-      right: -80px;
-      background: radial-gradient(circle, rgba(92, 143, 53, 0.23), transparent 68%);
+      width: 260px;
+      height: 260px;
+      top: -120px;
+      right: -60px;
+      background: radial-gradient(circle, rgba(159, 202, 122, 0.5), transparent 68%);
     }
 
     .hero-shell::after {
-      left: -90px;
+      width: 240px;
+      height: 240px;
+      left: -60px;
       bottom: -140px;
-      background: radial-gradient(circle, rgba(221, 122, 17, 0.18), transparent 68%);
+      background: radial-gradient(circle, rgba(244, 184, 199, 0.45), transparent 68%);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(92, 143, 53, 0.11);
-      color: #355223;
-      font-size: 0.94rem;
+      background: rgba(244, 184, 199, 0.24);
+      color: #91536a;
+      font-size: 0.92rem;
       font-weight: 700;
       letter-spacing: 0.04em;
     }
 
     .brandline {
-      margin-top: 16px;
+      margin-top: 14px;
+      color: #7d7262;
       font-size: 0.98rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      color: #557048;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-      line-height: 1.2;
-      margin: 0;
-    }
-
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
       margin-top: 18px;
-      max-width: 14ch;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      max-width: 8ch;
+      color: #5d473c;
     }
 
     .lead {
-      max-width: 62rem;
       margin: 18px 0 0;
-      font-size: 1.04rem;
-      color: #314037;
+      max-width: 45rem;
+      color: #5d4f43;
+      font-size: 1.06rem;
     }
 
-    .hero-grid {
+    .hero-top {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 26px;
-      margin-top: 30px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
       align-items: start;
     }
 
-    .hero-note,
-    .hero-quick {
-      background: rgba(255, 252, 245, 0.84);
-      border: 1px solid rgba(128, 113, 74, 0.18);
-      border-radius: 24px;
-      padding: 22px 22px 18px;
-    }
-
-    .hero-note p,
-    .hero-quick p {
-      margin: 0;
-    }
-
-    .chips {
+    .jump {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 22px;
     }
 
     .chip {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 9px 14px;
       border-radius: 999px;
-      text-decoration: none;
-      color: #2f3f33;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(110, 107, 78, 0.18);
+      border: 1px solid rgba(148, 112, 95, 0.14);
+      background: rgba(255, 255, 255, 0.82);
+      color: #6a5547;
       font-weight: 700;
+      text-decoration: none;
     }
 
-    .quick-list {
-      margin: 16px 0 0;
-      padding-left: 1.1em;
+    .hero-copy {
+      position: relative;
+      z-index: 1;
     }
 
-    .quick-list li + li {
-      margin-top: 8px;
+    .hero-side {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+    }
+
+    .guide-card,
+    .mini-panel,
+    .voice-panel,
+    .hormone-card,
+    .pair-card,
+    .practice-card,
+    .observe-card,
+    .page-card,
+    .source-item {
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .guide-card {
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 241, 0.92));
+    }
+
+    .guide-card img {
+      border-radius: 24px;
+    }
+
+    .speech {
+      padding: 16px 18px;
+      border-radius: 22px;
+      background: #fffdf9;
+      border: 1px dashed rgba(218, 126, 151, 0.35);
+      color: #6a564a;
+    }
+
+    .speech strong {
+      color: #8c5b6c;
+    }
+
+    .hero-figure {
+      margin-top: 28px;
+      padding: 14px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(153, 122, 94, 0.12);
+    }
+
+    .hero-figure img {
+      border-radius: 22px;
+    }
+
+    .hero-summary {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .mini-panel {
+      padding: 18px;
+    }
+
+    .mini-panel h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .mini-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     main {
-      padding-bottom: 72px;
+      padding-bottom: 68px;
     }
 
     section {
@@ -200,10 +271,6 @@
     }
 
     .panel {
-      background: rgba(255, 252, 246, 0.95);
-      border: 1px solid rgba(129, 116, 80, 0.16);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
       padding: 30px;
     }
 
@@ -223,139 +290,189 @@
       width: fit-content;
       padding: 8px 12px;
       border-radius: 999px;
-      background: #eef4e7;
-      color: #44622e;
+      background: rgba(159, 202, 122, 0.18);
+      color: #55723a;
       font-weight: 700;
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       letter-spacing: 0.05em;
     }
 
-    .figure-frame {
-      margin: 20px 0 0;
-      padding: 18px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 244, 235, 0.92));
-      border: 1px solid rgba(148, 132, 89, 0.17);
-      border-radius: 24px;
-    }
-
-    .figure-frame figcaption {
-      margin-top: 14px;
-      color: #5c665d;
-      font-size: 0.95rem;
-    }
-
-    .summary-grid {
+    .intro-grid,
+    .pair-grid,
+    .practice-grid,
+    .observe-grid,
+    .page-grid {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 22px;
+      gap: 18px;
     }
 
-    .h-card {
-      border-radius: 22px;
-      padding: 18px 16px 16px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(129, 116, 80, 0.16);
+    .intro-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 20px;
     }
 
-    .h-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
+    .voice-panel {
+      padding: 22px;
+      margin-top: 18px;
+      background: linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(255, 246, 240, 0.94));
     }
 
-    .h-card p {
+    .voice-panel p {
       margin: 0;
-      font-size: 0.95rem;
-      color: #314037;
+      color: #645548;
     }
 
-    .h-card p + p {
+    .voice-panel p + p {
       margin-top: 10px;
     }
 
-    .accent-green { border-top: 7px solid var(--green); }
-    .accent-blue { border-top: 7px solid var(--blue); }
-    .accent-teal { border-top: 7px solid var(--teal); }
-    .accent-orange { border-top: 7px solid var(--orange); }
-    .accent-gold { border-top: 7px solid var(--gold); }
+    .figure-frame {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 28px;
+      border: 1px solid rgba(153, 122, 94, 0.14);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 244, 0.92));
+    }
 
-    .detail-grid,
-    .practice-grid,
-    .note-grid {
+    .figure-frame img {
+      border-radius: 22px;
+    }
+
+    .figure-frame figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hormone-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       margin-top: 22px;
     }
 
-    .detail-card,
-    .practice-card,
-    .note-card {
+    .hormone-card {
       padding: 22px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(129, 116, 80, 0.16);
+      overflow: hidden;
+      position: relative;
     }
 
-    .detail-card h3,
-    .practice-card h3,
-    .note-card h3 {
-      font-size: 1.34rem;
-      margin-bottom: 14px;
+    .hormone-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 10px;
+      border-radius: 22px 0 0 22px;
+      background: var(--accent, var(--pink));
     }
 
-    .detail-card p,
-    .practice-card p,
-    .note-card p {
+    .hormone-card h3 {
+      font-size: 1.38rem;
+      margin-bottom: 12px;
+      color: #5d473c;
+    }
+
+    .hormone-card p {
       margin: 0;
-      color: #314037;
+      color: #5f5347;
     }
 
-    .detail-card p + p,
-    .practice-card p + p,
-    .note-card p + p {
+    .hormone-card p + p {
       margin-top: 10px;
     }
 
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 0 0 14px;
-    }
-
-    .tag {
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: #eff3ea;
-      color: #405740;
-      font-size: 0.84rem;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(153, 122, 94, 0.12);
+      color: #7a6557;
+      font-size: 0.82rem;
       font-weight: 700;
+    }
+
+    .pair-grid,
+    .practice-grid,
+    .observe-grid,
+    .page-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pair-card,
+    .practice-card,
+    .observe-card,
+    .page-card,
+    .source-item {
+      padding: 22px;
+    }
+
+    .pair-card h3,
+    .practice-card h3,
+    .observe-card h3,
+    .page-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .pair-card p,
+    .practice-card p,
+    .observe-card p,
+    .page-card p {
+      margin: 0;
+      color: #5f5347;
+    }
+
+    .pair-card p + p,
+    .practice-card p + p,
+    .observe-card p + p,
+    .page-card p + p {
+      margin-top: 10px;
     }
 
     .compare-table {
       width: 100%;
+      margin-top: 22px;
       border-collapse: collapse;
-      margin-top: 18px;
       overflow: hidden;
-      border-radius: 18px;
+      border-radius: 24px;
     }
 
     .compare-table th,
     .compare-table td {
       padding: 14px 16px;
-      border-bottom: 1px solid rgba(127, 117, 90, 0.16);
-      vertical-align: top;
       text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(153, 122, 94, 0.14);
     }
 
     .compare-table th {
-      background: #efe8d6;
+      background: rgba(244, 184, 199, 0.18);
+      color: #6a5547;
       font-weight: 700;
+    }
+
+    .compare-table td {
+      background: rgba(255, 255, 255, 0.8);
+      color: #5f5347;
     }
 
     .compare-table tr:last-child td {
       border-bottom: 0;
+    }
+
+    .page-card a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .page-card img {
+      margin-bottom: 14px;
+      border-radius: 18px;
     }
 
     .sources {
@@ -364,103 +481,46 @@
       margin-top: 18px;
     }
 
-    .page-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .page-card {
-      padding: 22px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(129, 116, 80, 0.16);
-    }
-
-    .page-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .page-card p {
-      margin: 0;
-      color: #314037;
-    }
-
-    .page-card a {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .source-item {
-      padding: 16px 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(129, 116, 80, 0.16);
-    }
-
     .source-item strong {
       display: block;
       margin-bottom: 6px;
+      color: #5a463a;
     }
 
     footer {
       padding: 22px 0 56px;
-      color: #5f6f62;
+      color: var(--muted);
     }
 
-    @media (max-width: 1100px) {
-      .summary-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 880px) {
-      .hero-grid,
-      .detail-grid,
+    @media (max-width: 1040px) {
+      .hero-top,
+      .intro-grid,
+      .hero-summary,
+      .hormone-grid,
+      .pair-grid,
       .practice-grid,
-      .note-grid,
+      .observe-grid,
       .page-grid {
         grid-template-columns: 1fr;
       }
-
-      .summary-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero-shell,
-      .panel {
-        padding: 24px;
-      }
     }
 
-    @media (max-width: 560px) {
-      .wrap {
-        width: min(var(--max), calc(100% - 18px));
+    @media (max-width: 720px) {
+      .hero-shell,
+      .panel {
+        padding: 22px;
       }
 
-      .summary-grid {
-        grid-template-columns: 1fr;
+      .wrap {
+        width: min(var(--max), calc(100% - 20px));
       }
 
       .hero {
-        padding-top: 24px;
-      }
-
-      .hero-shell,
-      .panel {
-        border-radius: 24px;
-        padding: 18px;
+        padding-top: 20px;
       }
 
       h1 {
         max-width: 9ch;
-      }
-
-      .figure-frame {
-        padding: 10px;
       }
     }
   </style>
@@ -468,280 +528,328 @@
 <body>
   <header class="hero">
     <div class="wrap hero-shell">
-      <div class="eyebrow">植物生理 × 園芸管理</div>
-      <div class="brandline">harunami Plant Base</div>
-      <h1>5大植物ホルモンの基礎と果樹・庭木管理</h1>
-      <p class="lead">
-        オーキシン、ジベレリン、サイトカイニン、エチレン、アブシシン酸は、植物の伸長、発芽、休眠、成熟、落葉落果、
-        乾燥応答を調整する代表的なシグナルである。このページでは、基本的な働きから、剪定、水管理、着果、樹勢管理へのつながりまでを、
-        図解と本文を組み合わせて整理する。
-      </p>
-      <div class="chips">
-        <a class="chip" href="./index.html">トップページ</a>
-        <a class="chip" href="#overview">全体像</a>
-        <a class="chip" href="#hormones">各ホルモン</a>
-        <a class="chip" href="#relationships">相互作用</a>
-        <a class="chip" href="#horticulture">果樹・庭木管理</a>
-        <a class="chip" href="./kuromatsu-pruning.html">黒松の剪定ページ</a>
-        <a class="chip" href="#sources">参考資料</a>
-      </div>
-      <div class="hero-grid">
-        <div class="hero-note">
-          <p><strong>このページの見方</strong></p>
-          <p>
-            植物ホルモンは単独で効くのではなく、濃度、器官、発育段階、光、温度、水分、栄養条件との組み合わせで働く。
-            ここでは理解しやすさを優先して、合成が活発な代表部位と、園芸で観察しやすい作用を中心に示す。
+      <div class="hero-top">
+        <div class="hero-copy">
+          <div class="eyebrow">やさしく学ぶ植物のしくみ</div>
+          <div class="brandline">harunami Plant Base</div>
+          <h1>はじめての植物ホルモン入門</h1>
+          <p class="lead">
+            植物ホルモンは、木や草が「伸びる」「休む」「芽を出す」「実を熟させる」ときの合図です。
+            このページでは、5大植物ホルモンの基本を、専門知識のない園芸愛好家向けに言い換えながら、
+            果樹や庭木の管理、剪定、水やり、樹勢の見方にどう結びつくかまで整理します。
           </p>
+          <div class="jump">
+            <a class="chip" href="./index.html">トップページ</a>
+            <a class="chip" href="#basics">まずは基本</a>
+            <a class="chip" href="#five">5つのホルモン</a>
+            <a class="chip" href="#care">管理と剪定</a>
+            <a class="chip" href="#observe">観察のコツ</a>
+            <a class="chip" href="./kuromatsu-pruning.html">黒松の剪定ガイド</a>
+            <a class="chip" href="#sources">参考資料</a>
+          </div>
         </div>
-        <div class="hero-quick">
-          <p><strong>先に押さえたい3点</strong></p>
-          <ul class="quick-list">
-            <li>剪定は主にオーキシンとサイトカイニンのバランスを変える。</li>
-            <li>発芽と休眠はジベレリンとアブシシン酸の対比で理解しやすい。</li>
-            <li>成熟と落葉落果ではエチレンと低オーキシンの組み合わせが重要になる。</li>
-          </ul>
-        </div>
+        <aside class="hero-side">
+          <div class="guide-card">
+            <img src="./assets/plant-hormones-friendly-guide.png" alt="植物ホルモンを案内する白い猫のキャラクター">
+            <div class="speech">
+              <strong>案内役メモ</strong><br>
+              ホルモンという名前でも、動物のように決まった臓器だけで作られるわけではありません。
+              若い芽、葉、根、種、果実など、いろいろな場所で作られ、量のバランスで反応が変わります。
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="./assets/plant-hormones-friendly-hero.png" alt="案内役のキャラクターが植物ホルモンの合図を紹介する水彩イラスト">
+      </figure>
+
+      <div class="hero-summary">
+        <article class="mini-panel">
+          <h3>難しい言葉を減らす</h3>
+          <p>専門用語は必要最小限にして、園芸の現場で見える反応に置き換えて説明します。</p>
+        </article>
+        <article class="mini-panel">
+          <h3>果樹も庭木も対象</h3>
+          <p>実をならせる木と、姿を楽しむ木の違いが分かるように整理します。</p>
+        </article>
+        <article class="mini-panel">
+          <h3>剪定判断までつなぐ</h3>
+          <p>「どこを切るか」だけでなく、「切ったあと木がどう反応するか」を重視します。</p>
+        </article>
       </div>
     </div>
   </header>
 
   <main class="wrap">
-    <section id="overview" class="panel">
+    <section id="basics" class="panel">
       <div class="section-head">
-        <span class="kicker">Overview</span>
-        <h2>まずは5つをひと目でつかむ</h2>
+        <span class="kicker">Basics</span>
+        <h2>植物ホルモンって、ひとことで言うと何？</h2>
         <p>
-          植物ホルモンは多くの組織で合成されうるが、教育上は「どこで目立ちやすいか」「何を強く動かすか」で整理すると理解しやすい。
-          下の図は、その代表例をまとめた全体像である。
+          いちばん分かりやすい言い方をすると、植物ホルモンは「植物の中を流れる合図」です。
+          その合図によって、芽が動く、枝が伸びる、花が咲く、実が熟す、乾燥から身を守る、といった反応が切り替わります。
         </p>
       </div>
+
+      <div class="intro-grid">
+        <article class="mini-panel">
+          <h3>1. 命令というより相談役</h3>
+          <p>
+            1つのホルモンだけで全てが決まるわけではありません。複数の合図が重なり合い、
+            光、温度、水分、肥料の効き方も加わって、最終的な反応が決まります。
+          </p>
+        </article>
+        <article class="mini-panel">
+          <h3>2. 木の反応として見える</h3>
+          <p>
+            ホルモンそのものは見えませんが、芽吹き方、新梢の伸び方、葉色、落葉、落果、枝数の出方として表に出ます。
+            園芸では、その現れ方を読むのが実用的です。
+          </p>
+        </article>
+        <article class="mini-panel">
+          <h3>3. 剪定は合図を動かす作業</h3>
+          <p>
+            枝先を切れば枝先から出ていた合図が弱まり、休んでいた芽が動きやすくなります。
+            つまり剪定は、形を整えるだけでなく、木の内部のバランスを変える行為でもあります。
+          </p>
+        </article>
+      </div>
+
+      <div class="voice-panel">
+        <p><strong>読み方のコツ</strong></p>
+        <p>
+          初心者のうちは「このホルモンが絶対にこう働く」と覚えるより、
+          「この場面ではこの合図が強そうだ」と考える方が実際の木を見やすくなります。
+        </p>
+      </div>
+    </section>
+
+    <section id="five" class="panel">
+      <div class="section-head">
+        <span class="kicker">Five Hormones</span>
+        <h2>5大植物ホルモンを、園芸の場面に引き寄せて覚える</h2>
+        <p>
+          学校の生物では名前だけで終わりがちですが、園芸では「どんな場面でその働きが見えるか」までつながると理解しやすくなります。
+          まずは全体の見取り図を見て、そのあと1つずつ整理します。
+        </p>
+      </div>
+
       <figure class="figure-frame">
-        <img src="./assets/plant-hormones-page-1-overview.png" alt="5大植物ホルモンの全体像を示す図解">
+        <img src="./assets/plant-hormones-friendly-map.png" alt="5大植物ホルモンの働きを案内役キャラクターと一緒に示した図">
         <figcaption>
-          図1. 5大植物ホルモンの概要。図中の部位は唯一の生成場所ではなく、合成が活発な代表例を示している。
+          ピンクは枝分かれと発根のきっかけ、青は上への伸び、黄は花と果実、緑は芽や若葉、紫は休みと乾燥への備えをイメージした図です。
         </figcaption>
       </figure>
-      <div class="summary-grid">
-        <article class="h-card accent-green">
-          <h3>オーキシン</h3>
-          <p><strong>代表部位:</strong> 茎頂、若い葉、未熟種子、発育中果実</p>
-          <p><strong>軸となる作用:</strong> 細胞伸長、頂芽優勢、発根、不定根形成</p>
-        </article>
-        <article class="h-card accent-blue">
-          <h3>ジベレリン</h3>
-          <p><strong>代表部位:</strong> 若い組織、種子胚、若い果実</p>
-          <p><strong>軸となる作用:</strong> 茎の伸長、発芽、休眠打破、果実肥大</p>
-        </article>
-        <article class="h-card accent-teal">
-          <h3>サイトカイニン</h3>
-          <p><strong>代表部位:</strong> 根の維管束周辺、根端、若い器官</p>
-          <p><strong>軸となる作用:</strong> 細胞分裂、側芽伸長、葉の老化抑制</p>
-        </article>
-        <article class="h-card accent-orange">
-          <h3>エチレン</h3>
-          <p><strong>代表部位:</strong> 成熟果実、老化葉、傷害組織</p>
-          <p><strong>軸となる作用:</strong> 成熟、落葉落果、老化、ストレス応答</p>
-        </article>
-        <article class="h-card accent-gold">
-          <h3>アブシシン酸</h3>
-          <p><strong>代表部位:</strong> 葉、根、種子、乾燥ストレス組織</p>
-          <p><strong>軸となる作用:</strong> 休眠維持、気孔閉鎖、乾燥応答、発芽抑制</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="hormones" class="panel">
-      <div class="section-head">
-        <span class="kicker">Hormones</span>
-        <h2>各ホルモンを園芸に引き寄せて理解する</h2>
-        <p>
-          5大植物ホルモンは教科書の暗記事項で終わらせるより、枝の伸び方、芽吹き、乾燥、落果と結び付けると実感しやすい。
-          ここでは、生理学的な基本と、果樹・庭木での見え方を並べて整理する。
-        </p>
-      </div>
-      <div class="detail-grid">
-        <article class="detail-card">
-          <div class="tag-row">
-            <span class="tag">オーキシン</span>
-            <span class="tag">頂芽優勢</span>
-            <span class="tag">発根</span>
-          </div>
-          <h3>枝先が強い理由をつくるホルモン</h3>
+      <div class="hormone-grid">
+        <article class="hormone-card" style="--accent: var(--pink);">
+          <div class="label">オーキシン</div>
+          <h3>枝先が主役になりやすい合図</h3>
           <p>
-            オーキシンは茎頂や若い葉、発育中の果実や種子で目立ちやすく、茎では先端から基部へ極性移動しやすい。
-            これが頂芽優勢の基盤になり、枝先が元気な間は側芽の伸長が抑えられやすい。
+            主に若い芽や若葉、育ちつつある種や果実で作られやすく、細胞を伸ばしたり、枝先を優先して伸ばしたりします。
           </p>
           <p>
-            園芸では、枝先を切るとオーキシン供給が減って側芽が動きやすくなる。挿し木の発根促進剤が効くのも、
-            オーキシン作用を利用しているからである。
+            園芸で見えやすいのは、頂芽優勢と発根です。枝先が元気だと脇芽が休みやすく、先端を切ると近くの芽が動きやすくなります。
+          </p>
+          <p>
+            <strong>管理に生かすなら</strong> 枝数を増やしたい若木では切り戻しが効きやすく、挿し木では発根促進の考え方につながります。
           </p>
         </article>
-        <article class="detail-card">
-          <div class="tag-row">
-            <span class="tag">ジベレリン</span>
-            <span class="tag">発芽</span>
-            <span class="tag">伸長</span>
-          </div>
-          <h3>芽や新梢を伸ばす方向に働く</h3>
+
+        <article class="hormone-card" style="--accent: var(--blue);">
+          <div class="label">ジベレリン</div>
+          <h3>ぐっと伸びる、動き出す合図</h3>
           <p>
-            ジベレリンは若い組織、種子胚、若い果実などで活発に合成され、茎の伸長、発芽、休眠打破、果実肥大を促進する。
-            種子発芽では、胚由来のジベレリンが貯蔵養分の利用を進める方向にはたらく。
+            若い葉や茎の先、発芽中の種、育っている果実で働きやすく、茎や新梢を伸ばし、休眠からの立ち上がりにも関わります。
           </p>
           <p>
-            果樹では、樹勢が強い木や強剪定後の木で、長く柔らかい枝が出やすい状況と結び付けて理解しやすい。
-            伸び過ぎる木では、剪定と施肥を強め過ぎないことが重要になる。
+            園芸で見えやすいのは、勢いよく伸びる新梢や、発芽の動きです。木が強く伸びる年は、この系統の働きが目立ちやすくなります。
+          </p>
+          <p>
+            <strong>管理に生かすなら</strong> 強剪定や窒素過多のあとに徒長枝が増えたときは、木が伸びる方向へ偏っていないかを疑います。
           </p>
         </article>
-        <article class="detail-card">
-          <div class="tag-row">
-            <span class="tag">サイトカイニン</span>
-            <span class="tag">細胞分裂</span>
-            <span class="tag">側芽</span>
-          </div>
-          <h3>根の元気さを地上部へつなぐ</h3>
+
+        <article class="hormone-card" style="--accent: var(--green);">
+          <div class="label">サイトカイニン</div>
+          <h3>芽を動かし、若さを保つ合図</h3>
           <p>
-            サイトカイニンは根での合成と、根から地上部への輸送が重要なホルモンで、細胞分裂、側芽の伸長、葉の老化抑制に関わる。
-            オーキシンに対して相対的に優位になると、休んでいた側芽が動きやすい。
+            根の先でよく作られ、地上部へ上がってきて、細胞分裂や芽の成長、葉の若さの維持を助けます。
           </p>
           <p>
-            果樹や庭木では、根が健全な木ほど芽吹きが安定しやすい。根が元気な状態で強剪定すると、春の吹き返しが強くなりやすい。
-          </p>
-        </article>
-        <article class="detail-card">
-          <div class="tag-row">
-            <span class="tag">エチレン</span>
-            <span class="tag">成熟</span>
-            <span class="tag">落葉落果</span>
-          </div>
-          <h3>成熟と老化を進める気体シグナル</h3>
-          <p>
-            エチレンは成熟果実、老化葉、傷害を受けた組織で増えやすく、気体として周囲へ拡散する。
-            果実成熟、落葉、落果、老化、傷害応答に深く関わるため、果樹栽培では見過ごせない。
+            根がよく働いている木は、芽吹きが安定しやすく、脇芽も動きやすくなります。逆に根が弱ると、この後押しが落ちます。
           </p>
           <p>
-            過熟果や傷果を放置すると、周囲の果実の成熟や落果が進みやすい。収穫遅れや病虫害の放置が、樹上での変化を加速させることがある。
+            <strong>管理に生かすなら</strong> 剪定だけでなく、根の量、土の通気、水はけ、植え替え後の回復も一緒に見る必要があります。
           </p>
         </article>
-        <article class="detail-card">
-          <div class="tag-row">
-            <span class="tag">アブシシン酸</span>
-            <span class="tag">休眠</span>
-            <span class="tag">乾燥応答</span>
-          </div>
-          <h3>守りを優先させるホルモン</h3>
+
+        <article class="hormone-card" style="--accent: var(--yellow);">
+          <div class="label">エチレン</div>
+          <h3>熟す、落ちる、老いる側へ向かう合図</h3>
           <p>
-            アブシシン酸は葉、根、種子、乾燥や塩ストレスを受けた組織で増えやすく、休眠維持、気孔閉鎖、乾燥応答、発芽抑制を担う。
-            水分損失を抑える防御として極めて重要である。
+            成熟しつつある果実、老化した葉、傷んだ組織、ストレスを受けた部分で出やすい気体ホルモンです。
           </p>
           <p>
-            ただし、防御が優先されると光合成や伸長成長は落ちる。夏の庭木、鉢植え、植え付け直後の苗木で生育が鈍るのは、
-            アブシシン酸を介した反応と結び付けて考えやすい。
+            果実の色づきや追熟、落葉、落果、傷みの広がりと関係が深く、環境の急変や病虫害でも増えやすくなります。
+          </p>
+          <p>
+            <strong>管理に生かすなら</strong> 収穫遅れ、強い乾燥、根傷みのあとに急な落果や葉落ちが起きたときの見方に使えます。
+          </p>
+        </article>
+
+        <article class="hormone-card" style="--accent: var(--purple);">
+          <div class="label">アブシシン酸</div>
+          <h3>休む、守る、水を節約する合図</h3>
+          <p>
+            葉や根などで作られ、乾燥や寒さなどのストレス時に働きやすく、気孔を閉じて水を守り、休眠にも関わります。
+          </p>
+          <p>
+            しおれる前から光合成を抑え、成長を止める方向へ働くため、見た目より早く木の勢いが落ちていることがあります。
+          </p>
+          <p>
+            <strong>管理に生かすなら</strong> 夏の水切れ、移植後、根詰まり後に「まず水と根を立て直す」判断の裏付けになります。
           </p>
         </article>
       </div>
     </section>
 
-    <section id="relationships" class="panel">
+    <section class="panel">
       <div class="section-head">
         <span class="kicker">Relationships</span>
-        <h2>相互作用は「代表的な対比」で押さえる</h2>
+        <h2>大事なのは、1つずつより「組み合わせ」</h2>
         <p>
-          植物ホルモンは実際には複雑なネットワークで働くが、初心者はまず代表的な組み合わせを押さえると理解しやすい。
-          下の図は、教育用に単純化した3つの代表関係である。
+          実際の木では、ホルモンは単独よりも組み合わせで効きます。剪定や管理に役立つ関係だけ先に覚えておくと、現場で迷いにくくなります。
         </p>
       </div>
-      <figure class="figure-frame">
-        <img src="./assets/plant-hormones-page-2-relationships.png" alt="5大植物ホルモンの代表的な関係を示す図解">
-        <figcaption>
-          図2. 頂芽優勢と側芽、発芽と休眠、成熟と落葉落果の3組に絞った比較図。実際の制御はさらに多くの条件が重なる。
-        </figcaption>
-      </figure>
-      <div class="note-grid">
-        <article class="note-card">
-          <h3>1. オーキシンとサイトカイニン</h3>
+
+      <div class="pair-grid">
+        <article class="pair-card">
+          <h3>オーキシン × サイトカイニン</h3>
           <p>
-            頂芽優勢が強いときは、枝先由来オーキシンの影響で側芽は抑えられやすい。一方で、根由来サイトカイニンの影響が見えやすくなると、
-            側芽の伸長が進みやすい。剪定後に芽吹き方が変わるのは、このバランス変化で説明しやすい。
+            枝先から来るオーキシンが強いと、脇芽は休みやすくなります。いっぽう根から来るサイトカイニンは、芽を動かす後押しをします。
+          </p>
+          <p>
+            だから先端を切ると、枝先の優先が弱まり、脇芽が出やすくなります。若木の枝づくりで切り戻しが効く理由はここです。
           </p>
         </article>
-        <article class="note-card">
-          <h3>2. ジベレリンとアブシシン酸</h3>
+
+        <article class="pair-card">
+          <h3>ジベレリン × アブシシン酸</h3>
           <p>
-            ジベレリンは発芽と伸長を進める方向、アブシシン酸は休眠維持と乾燥耐性を優先する方向に働く。
-            種子の発芽、落葉果樹の休眠、乾燥時の成長停止を整理するときに、最も分かりやすい対比である。
+            ジベレリンは「伸びる」「動き出す」側、アブシシン酸は「休む」「守る」側と考えると分かりやすくなります。
+          </p>
+          <p>
+            春先の立ち上がりと、夏の乾燥や冬の休眠では、木がどちらへ傾いているかを見ると管理判断がしやすくなります。
           </p>
         </article>
-        <article class="note-card">
-          <h3>3. エチレンと低オーキシン</h3>
+
+        <article class="pair-card">
+          <h3>エチレン × 低オーキシン</h3>
           <p>
-            果実や葉でオーキシン供給が下がると、離層形成が進みやすくなる。そこにエチレンの作用が加わると、成熟、落葉、落果が進みやすい。
-            収穫遅れや樹体ストレスが落果と結び付きやすい背景は、ここで理解できる。
+            葉や果実に送られるオーキシンが弱くなると、離れやすい層ができやすくなり、そこへエチレンが重なると落葉や落果が進みます。
+          </p>
+          <p>
+            収穫遅れ、乾燥、根傷み、強いストレスのあとに急に落ち始める現象は、この見方で整理しやすくなります。
           </p>
         </article>
-        <article class="note-card">
-          <h3>単純化モデルとしての限界</h3>
+
+        <article class="pair-card">
+          <h3>根と地上部のバランス</h3>
           <p>
-            実際には、同じホルモンでも濃度や器官によって逆向きの見え方を示すことがある。したがって、
-            このページの図解は「最初に混乱しないための整理」として使い、実際の管理では樹勢、光、水、温度、根の状態も合わせて見ることが大切である。
+            根が元気なら、サイトカイニンなどの後押しが地上部へ届きやすくなります。逆に根が弱ると、剪定で形だけ整えても反応は鈍くなります。
+          </p>
+          <p>
+            芽吹き不良や葉の小型化を見たら、まず根・水・土を疑う。この順番が、無理な切り足しを防ぎます。
           </p>
         </article>
+      </div>
+
+      <div class="voice-panel">
+        <p><strong>案内役メモ</strong></p>
+        <p>
+          「枝を切ったのに思ったように芽が出ない」「逆に暴れた」というときは、
+          切り方だけでなく、木の勢い、根の量、水分、前年の実つきまで一緒に見ないと答えがずれます。
+        </p>
       </div>
     </section>
 
-    <section id="horticulture" class="panel">
+    <section id="care" class="panel">
       <div class="section-head">
-        <span class="kicker">Horticulture</span>
-        <h2>果樹・庭木の管理ではどう見えるか</h2>
+        <span class="kicker">Care &amp; Pruning</span>
+        <h2>果樹や庭木の管理・剪定に、どう生かすか</h2>
         <p>
-          5大植物ホルモンの知識は、果樹と庭木の管理で特に役立つ。強剪定の反動、間引きと切り返しの違い、水切れの初期反応、
-          果実の成熟と落果など、日常の観察を言語化しやすくなる。
+          ホルモンを知ると、剪定を「切る技術」だけでなく「切ったあとに木がどう反応するかを予測する技術」として見られるようになります。
+          ここでは果樹と庭木の両方に使いやすい考え方を、場面別に整理します。
         </p>
       </div>
+
       <figure class="figure-frame">
-        <img src="./assets/plant-hormones-page-3-horticulture.png" alt="果樹と庭木の管理における植物ホルモンの関係を示す図解">
+        <img src="./assets/plant-hormones-friendly-pruning.png" alt="果樹と庭木の管理や剪定への生かし方を示す案内役キャラクターのイラスト">
         <figcaption>
-          図3. 強剪定、間引きと切り返し、水切れ、成熟と落果を、ホルモンバランスの変化として見た整理図。
+          左は果実をならせる木で光と枝の整理を重視する考え方、右は自然な樹形を崩し過ぎない庭木管理を表したイメージです。
         </figcaption>
       </figure>
+
       <div class="practice-grid">
         <article class="practice-card">
-          <h3>強剪定ほど反動が出やすい</h3>
+          <h3>若木で枝数を増やしたいとき</h3>
           <p>
-            休眠期に大きく切ると、枝先由来オーキシンの低下で側芽抑制が緩み、根に蓄えられた資源とサイトカイニンの影響が強く出やすい。
-            その結果、春に水芽や徒長枝が多発しやすくなる。
+            果樹でも庭木でも、骨格を作る時期は軽い切り戻しが有効です。先端を切るとオーキシンの優先が弱まり、近くの芽が動きやすくなります。
           </p>
           <p>
-            樹勢を落ち着かせたいなら、一度に切り過ぎず、数年単位で少しずつ調整する方が穏やかである。
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3>間引きと切り返しは目的が違う</h3>
-          <p>
-            間引き剪定は枝を元から抜くため、局所的な刺激が比較的小さく、樹冠内部に光と風を入れやすい。
-            切り返し剪定は近くの芽を動かしやすく、枝数を増やしたい更新や若木づくりに向く。
-          </p>
-          <p>
-            自然樹形を保ちたい庭木や、果樹で内部結実枝を残したい場合は、間引き主体の方が扱いやすいことが多い。
+            ただし一気に短くし過ぎると、勢いの強い徒長枝だけが増えることがあります。1回で作り切ろうとせず、数年かけて枝を配る方が安定します。
           </p>
         </article>
+
         <article class="practice-card">
-          <h3>水切れは見える前から進んでいる</h3>
+          <h3>果樹で実つきと光を両立したいとき</h3>
           <p>
-            乾燥するとアブシシン酸が増え、気孔が閉じて蒸散を抑える。これは防御として正しいが、光合成と成長は落ちる。
-            まだ見た目に大きな変化がなくても、果実肥大や新梢伸長はすでに鈍っていることがある。
+            成木の果樹は、枝数を増やすより「中まで光が入るか」を重視します。外側だけ切り詰めるより、込み合う枝を元から抜く間引き剪定の方が理にかないます。
           </p>
           <p>
-            植え付け直後、真夏、鉢植えでは特に起こりやすいため、朝の潅水やマルチング、根域保護の効果が大きい。
+            間引きはホルモン刺激が局所に集中しにくく、強い吹き返しを抑えやすい切り方です。結実枝を残しながら風通しを作る意識が重要です。
           </p>
         </article>
+
         <article class="practice-card">
-          <h3>成熟と落果はエチレンを意識する</h3>
+          <h3>庭木で自然な姿を保ちたいとき</h3>
           <p>
-            果実が熟してくるとエチレンの影響が増え、落果もしやすくなる。そこへ乾燥、病虫害、着果過多などのストレスが重なると、
-            樹上での脱落が進みやすい。
+            庭木は「実をならせる」より「枝ぶりや葉姿を見せる」目的が大きいため、外周を一律に刈り込むより、不要枝を分岐点で抜く方が自然です。
           </p>
           <p>
-            過熟果や傷果を早めに取り除き、収穫遅れを避けることは、品質維持だけでなく樹体の負担軽減にもつながる。
+            外側ばかり細かく切ると、先端近くに芽が集中して表面だけ茂り、内部が暗くなります。これはホルモンの偏りが表面側で続くためです。
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3>木が暴れやすいとき</h3>
+          <p>
+            強剪定のあとに太く長い新梢が一斉に出るなら、木が「伸びる側」に強く傾いています。ジベレリン的な伸長反応と、根からの後押しが出過ぎている状態です。
+          </p>
+          <p>
+            次回は切り戻し量を減らし、太い枝を抜く間引き主体へ寄せます。施肥、とくに窒素が強すぎないかも一緒に見直します。
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3>弱った木ほど、先に根と水を見る</h3>
+          <p>
+            芽吹きが悪い、葉が小さい、葉先が焼ける、枝先が枯れ込むといった症状では、まず根傷み、過湿、乾燥、根詰まりを疑います。
+          </p>
+          <p>
+            根が弱るとサイトカイニンの後押しが落ち、乾燥でアブシシン酸が増えるため、強く切っても回復しにくくなります。回復期は軽い整理にとどめる方が安全です。
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3>果実の成熟や落果を見るとき</h3>
+          <p>
+            色づき、追熟、自然落果にはエチレンが深く関わります。熟し過ぎた果実や傷んだ果実を放置すると、周囲も一気に進みやすくなります。
+          </p>
+          <p>
+            果樹管理では「収穫適期を逃さない」「乾燥や根傷みを重ねない」ことが、品質維持と落果防止の両面で重要です。
           </p>
         </article>
       </div>
@@ -749,171 +857,91 @@
       <table class="compare-table">
         <thead>
           <tr>
-            <th>観察された状態</th>
-            <th>背景で起きやすいこと</th>
-            <th>管理の考え方</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>強く切った後に徒長枝が多い</td>
-            <td>オーキシン低下で側芽が解放され、根の資源とサイトカイニンが地上部に効きやすい</td>
-            <td>一度に切り過ぎない。翌年以降は間引きを主体にする</td>
-          </tr>
-          <tr>
-            <td>挿し木が発根しにくい</td>
-            <td>オーキシン作用不足、乾燥、温度不適</td>
-            <td>穂の鮮度、水分、温度を整え、必要なら発根剤を使う</td>
-          </tr>
-          <tr>
-            <td>夏に葉がしおれやすい</td>
-            <td>アブシシン酸増加、気孔閉鎖、蒸散と吸水の不均衡</td>
-            <td>朝の潅水、マルチ、根域保護で水ストレスを減らす</td>
-          </tr>
-          <tr>
-            <td>樹冠内部が暗く実つきが落ちる</td>
-            <td>過繁茂で光が不足し、栄養成長が優位になりやすい</td>
-            <td>切り返しより間引きで内部へ光を入れる</td>
-          </tr>
-          <tr>
-            <td>収穫前に果実が落ちる</td>
-            <td>エチレン増加、離層形成、樹体ストレス</td>
-            <td>過熟を避け、乾燥、病虫害、着果過多を減らす</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="section-head" style="margin-top: 34px;">
-        <span class="kicker">How to Use</span>
-        <h2>ホルモンの知識を管理・剪定にどう生かすか</h2>
-        <p>
-          ここから先は、知識をそのまま管理判断へつなぐための整理である。果樹では「樹勢と着果の釣り合い」を、
-          庭木では「自然樹形と樹冠内部の健全さ」を主眼にすると、ホルモンの見方が実務に落ちやすい。
-        </p>
-      </div>
-
-      <figure class="figure-frame">
-        <img src="./assets/plant-hormones-page-4-pruning-application.png" alt="果樹と庭木の管理剪定に植物ホルモンの知識をどう生かすかを示す図解">
-        <figcaption>
-          図4. 果樹の若木と成木、庭木の自然樹形、弱った木の扱いを、ホルモン反応と管理目的の両方から見た補助図。
-        </figcaption>
-      </figure>
-
-      <div class="practice-grid">
-        <article class="practice-card">
-          <h3>果樹の若木は「骨格づくり」に使う</h3>
-          <p>
-            若木では、主枝や亜主枝を育てるために、切り返し剪定で近くの芽を動かす考え方が役立つ。
-            オーキシンの抑制を一時的に弱めることで、必要な位置の芽を起こしやすくなるからである。
-          </p>
-          <p>
-            ただし、毎年強く切り続けると徒長枝ばかり増えやすい。骨格ができたら、切り返し中心から間引き中心へ徐々に移すのがよい。
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3>果樹の成木は「伸ばす」より「透かす」</h3>
-          <p>
-            成木では、実をつける枝へ光を入れ、栄養成長が暴れ過ぎないようにすることが大切である。
-            樹勢が強い木に対して休眠期の強い切り返しを繰り返すと、オーキシン低下とサイトカイニン作用で水芽が増えやすい。
-          </p>
-          <p>
-            そのため、成木では間引き剪定を主体にして、込み合う枝、立ち過ぎた枝、陰をつくる枝を抜き、
-            内部結実枝を保つ方向が基本になる。
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3>庭木は「自然樹形を壊さない」切り方が合う</h3>
-          <p>
-            庭木では、果実生産よりも樹形、葉姿、枝ぶり、光の抜け方が重要になることが多い。
-            そのため、外周を一律に刈り込むより、枝の分岐点で間引いて流れを残す方が、ホルモン刺激が局所に集中しにくく、
-            不自然な吹き返しを抑えやすい。
-          </p>
-          <p>
-            生垣のように面をそろえる管理を除けば、庭木の剪定では「外へ出る芽まで切り戻す」「不要枝は元から抜く」という原則が扱いやすい。
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3>弱った木ほど、先に根と水を見る</h3>
-          <p>
-            芽吹きが悪い、葉が小さい、葉先が焼ける、枝先が枯れ込むといった症状では、強剪定より先に根と水分条件を見直したい。
-            根が弱るとサイトカイニン供給が落ち、乾燥ストレスでアブシシン酸が増えるため、地上部だけ整えても回復しにくいからである。
-          </p>
-          <p>
-            移植後、根詰まり後、夏の乾燥後は、樹冠整理を軽くとどめて活着と吸水の回復を優先する方が安全である。
-          </p>
-        </article>
-      </div>
-
-      <table class="compare-table" style="margin-top: 24px;">
-        <thead>
-          <tr>
             <th>場面</th>
-            <th>果樹での使い方</th>
-            <th>庭木での使い方</th>
+            <th>果樹で考えること</th>
+            <th>庭木で考えること</th>
             <th>ホルモンの見方</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>枝数を増やしたい</td>
-            <td>若木の骨格づくりで切り返しを使う</td>
-            <td>更新したい枝だけ限定的に切り戻す</td>
-            <td>オーキシン低下で近くの芽が動きやすい</td>
+            <td>若木の骨格づくりで、軽い切り戻しを使う</td>
+            <td>更新したい枝だけ限定的に切る</td>
+            <td>先端優勢が弱まり、脇芽が動きやすくなる</td>
           </tr>
           <tr>
-            <td>樹冠内部へ光を入れたい</td>
-            <td>結実枝を残しながら間引く</td>
+            <td>木が込み合っている</td>
+            <td>結実枝を見ながら間引いて光を入れる</td>
             <td>枝の流れを見て不要枝を元から抜く</td>
-            <td>間引きは局所的な刺激が小さく、吹き返しを抑えやすい</td>
+            <td>間引きは局所刺激が小さく、暴れにくい</td>
           </tr>
           <tr>
-            <td>木が暴れ過ぎる</td>
-            <td>強い冬剪定と窒素過多を避ける</td>
-            <td>外周だけの切り詰めを減らす</td>
-            <td>サイトカイニンとジベレリン側の影響が強く出やすい</td>
+            <td>徒長枝が多い</td>
+            <td>強い冬剪定や窒素過多を見直す</td>
+            <td>外周だけの刈り込みを減らす</td>
+            <td>伸長成長側の反応が強すぎる</td>
           </tr>
           <tr>
             <td>木が弱っている</td>
-            <td>着果負担を減らし、根と水を立て直す</td>
-            <td>軽い整理にとどめて活着と回復を優先する</td>
-            <td>アブシシン酸増加とサイトカイニン低下を疑う</td>
+            <td>着果負担を減らし、吸水と根の回復を優先する</td>
+            <td>軽い整理で止め、活着と回復を待つ</td>
+            <td>アブシシン酸増加、サイトカイニン低下を疑う</td>
           </tr>
         </tbody>
       </table>
+    </section>
 
-      <div class="section-head" style="margin-top: 34px;">
+    <section id="observe" class="panel">
+      <div class="section-head">
         <span class="kicker">Observation</span>
-        <h2>剪定や管理のあとに何を観察するとよいか</h2>
+        <h2>剪定や管理のあと、どこを見るとよいか</h2>
         <p>
-          ホルモンは目に見えないが、反応は新梢、芽吹き、葉色、果実、落葉の仕方として表れる。
-          剪定の善し悪しは、切った直後より、その後の出方で判断する方が正確である。
+          剪定の良し悪しは、その場でなく数週間から数か月後の反応に出ます。
+          次のような見え方を知っておくと、翌年の切り方や水管理を修正しやすくなります。
         </p>
       </div>
 
-      <div class="note-grid">
-        <article class="note-card">
+      <div class="observe-grid">
+        <article class="observe-card">
           <h3>吹き返しが強すぎる</h3>
           <p>
-            太く立った徒長枝が一斉に出るなら、強剪定が強過ぎた可能性がある。次回は切り返し量を減らし、
-            間引き主体に寄せると落ち着きやすい。
+            太く立った枝が一斉に出るなら、切り戻しが強すぎた可能性があります。次回は間引き割合を増やし、外周だけを短くする切り方を減らします。
           </p>
         </article>
-        <article class="note-card">
-          <h3>芽吹きが弱い</h3>
+
+        <article class="observe-card">
+          <h3>芽吹きがそろわない</h3>
           <p>
-            根傷み、過湿、乾燥、着果負担、日照不足などを疑う。単に切り足すのではなく、根と水分条件を先に整える方が理にかなう。
+            切り方だけでなく、根傷み、水切れ、日照不足、前年の着果負担を疑います。ホルモン以前に、木全体の体力差が大きいことがあります。
           </p>
         </article>
-        <article class="note-card">
-          <h3>葉はあるが花や実が少ない</h3>
+
+        <article class="observe-card">
+          <h3>葉は茂るのに花や実が少ない</h3>
           <p>
-            栄養成長が強過ぎる可能性がある。果樹では、樹冠内部へ光を入れること、窒素過多を避けること、強過ぎる剪定を避けることが重要である。
+            栄養成長に偏っている可能性があります。果樹では光不足、強剪定、窒素過多が重なっていないかを確認します。
           </p>
         </article>
-        <article class="note-card">
-          <h3>落葉や落果が急に増えた</h3>
+
+        <article class="observe-card">
+          <h3>急に葉が黄ばんで落ちる</h3>
           <p>
-            エチレンが増えやすい条件が重なっていないかを確認する。乾燥、病虫害、根傷み、過熟、急な環境変化が引き金になりやすい。
+            乾燥、根傷み、過湿、病虫害、移植ストレスなどでエチレンやアブシシン酸が増えているかもしれません。強い追い剪定は避けます。
+          </p>
+        </article>
+
+        <article class="observe-card">
+          <h3>枝先ばかり茂って中が空く</h3>
+          <p>
+            庭木でよくある反応です。表面だけ細かく切る管理を続けると、先端側に反応が集中し、内部へ光が入らなくなります。
+          </p>
+        </article>
+
+        <article class="observe-card">
+          <h3>夏に急に勢いが落ちた</h3>
+          <p>
+            土は乾いていないように見えても、実際には吸水が追いついていないことがあります。アブシシン酸が先に働くので、しおれる前から成長は鈍ります。
           </p>
         </article>
       </div>
@@ -921,67 +949,31 @@
 
     <section class="panel">
       <div class="section-head">
-        <span class="kicker">Plant Base Pages</span>
-        <h2>公開中のページ</h2>
+        <span class="kicker">Related Pages</span>
+        <h2>関連ページ</h2>
         <p>
-          harunami Plant Base では、植物学の基礎と、庭木・果樹の管理へどう落とし込むかをテーマごとにまとめていく。
+          植物ホルモンの理解は、季節ごとの具体的な剪定作業に結びつけると定着しやすくなります。
         </p>
       </div>
+
       <div class="page-grid">
         <article class="page-card">
-          <a href="./plant-hormones.html">
-            <h3>5大植物ホルモンの基礎と果樹・庭木管理</h3>
+          <a href="./index.html">
+            <img src="./assets/plant-hormones-friendly-hero.png" alt="植物ホルモン入門ページのイメージ">
+            <h3>Plant Base トップページ</h3>
             <p>
-              植物ホルモンの基本作用と、剪定や樹勢管理へのつながりを図解で整理した基礎ページ。
+              植物の基礎、庭木管理、剪定の読み物をまとめて見られる入口ページです。
             </p>
           </a>
         </article>
         <article class="page-card">
           <a href="./kuromatsu-pruning.html">
+            <img src="./assets/kuromatsu-pruning-calendar.png" alt="黒松の剪定ガイドのイメージ">
             <h3>黒松の剪定ガイド</h3>
             <p>
-              春の芽数調整から秋冬のもみあげまで、黒松の庭木管理を時期別にまとめた実践ページ。
+              春の芽かきから秋冬のもみあげまで、黒松の管理を時期別にまとめた実践ページです。
             </p>
           </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="section-head">
-        <span class="kicker">Scientific Notes</span>
-        <h2>誤解しやすいポイント</h2>
-        <p>
-          植物ホルモンの説明では、分かりやすさのために単純化し過ぎると誤解が生じやすい。最低限、次の点は意識しておきたい。
-        </p>
-      </div>
-      <div class="note-grid">
-        <article class="note-card">
-          <h3>「生成部位」は唯一ではない</h3>
-          <p>
-            オーキシン、サイトカイニン、アブシシン酸などは、複数の組織で合成される。図や表にある部位は、
-            合成が特に活発な代表例である。
-          </p>
-        </article>
-        <article class="note-card">
-          <h3>同じホルモンでも器官で見え方が違う</h3>
-          <p>
-            たとえばオーキシンは発根を促す一方で、頂芽優勢も強める。どこで、どの濃度で、何と組み合わさって働くかを切り分ける必要がある。
-          </p>
-        </article>
-        <article class="note-card">
-          <h3>剪定だけで全ては決まらない</h3>
-          <p>
-            剪定の反応は、根の量、貯蔵養分、施肥量、日照、品種、台木、前年の着果量にも左右される。
-            ホルモンはその背景を説明する軸の1つである。
-          </p>
-        </article>
-        <article class="note-card">
-          <h3>このページの図解は教育用に校正している</h3>
-          <p>
-            挿絵と図解は画像生成を使って作成し、本文と参考文献に合わせて採用版を選んでいる。
-            文字量を抑え、本文側で補足する構成にしているのは、視認性と科学的整合の両立のためである。
-          </p>
         </article>
       </div>
     </section>
@@ -991,9 +983,10 @@
         <span class="kicker">Sources</span>
         <h2>参考にした主な資料</h2>
         <p>
-          基本作用は NCBI Bookshelf と PMC のレビュー、果樹や庭木管理の説明は大学 Extension 資料を中心に整理した。
+          基本作用は植物生理学の総説と教科書的資料、果樹・庭木の管理は大学 Extension 資料を中心に整理しています。
         </p>
       </div>
+
       <div class="sources">
         <div class="source-item">
           <strong>NCBI Bookshelf, Plant Biology and Agriculture</strong>
@@ -1033,7 +1026,7 @@
 
   <footer class="wrap">
     <p>
-      harunami Plant Base の基礎ページとして、植物ホルモンの基本と、果樹・庭木管理へのつながりを整理した。
+      harunami Plant Base の植物ホルモンページを、一般向けの読み物として全面的に再構成しました。
     </p>
   </footer>
 </body>
