@@ -364,6 +364,36 @@
       margin-top: 18px;
     }
 
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .page-card {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(129, 116, 80, 0.16);
+    }
+
+    .page-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .page-card p {
+      margin: 0;
+      color: #314037;
+    }
+
+    .page-card a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
     .source-item {
       padding: 16px 18px;
       border-radius: 20px;
@@ -391,7 +421,8 @@
       .hero-grid,
       .detail-grid,
       .practice-grid,
-      .note-grid {
+      .note-grid,
+      .page-grid {
         grid-template-columns: 1fr;
       }
 
@@ -450,6 +481,7 @@
         <a class="chip" href="#hormones">各ホルモン</a>
         <a class="chip" href="#relationships">相互作用</a>
         <a class="chip" href="#horticulture">果樹・庭木管理</a>
+        <a class="chip" href="./kuromatsu-pruning.html">黒松の剪定ページ</a>
         <a class="chip" href="#sources">参考資料</a>
       </div>
       <div class="hero-grid">
@@ -882,6 +914,34 @@
           <p>
             エチレンが増えやすい条件が重なっていないかを確認する。乾燥、病虫害、根傷み、過熟、急な環境変化が引き金になりやすい。
           </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <span class="kicker">Plant Base Pages</span>
+        <h2>公開中のページ</h2>
+        <p>
+          harunami Plant Base では、植物学の基礎と、庭木・果樹の管理へどう落とし込むかをテーマごとにまとめていく。
+        </p>
+      </div>
+      <div class="page-grid">
+        <article class="page-card">
+          <a href="./index.html">
+            <h3>5大植物ホルモンの基礎と果樹・庭木管理</h3>
+            <p>
+              植物ホルモンの基本作用と、剪定や樹勢管理へのつながりを図解で整理した基礎ページ。
+            </p>
+          </a>
+        </article>
+        <article class="page-card">
+          <a href="./kuromatsu-pruning.html">
+            <h3>黒松の剪定ガイド</h3>
+            <p>
+              春の芽数調整から秋冬のもみあげまで、黒松の庭木管理を時期別にまとめた実践ページ。
+            </p>
+          </a>
         </article>
       </div>
     </section>
