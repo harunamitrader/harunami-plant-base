@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="harunami plant baseは、植木・家庭菜園・庭づくりをやさしく学べる一般向けの植物情報サイトです。"
+      content="harunami plant base は、植木・家庭菜園・庭づくりを、専門知識がなくても読み進められるようにやさしくまとめた植物の情報サイト。案内役はねこのはるにゃさんです。"
     />
-    <meta name="theme-color" content="#f8fbf4" />
-    <title>harunami plant base</title>
+    <meta name="theme-color" content="#f7faf3" />
+    <title>harunami plant base｜やさしい植物と庭の手帖</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='50' font-size='48'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,113 +22,89 @@
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand" href="./index.html">
-          <span class="brand-mark">葉</span>
+          <span class="brand-icon"><img src="./assets/images/harunyasan-main.png" alt="" /></span>
           <span class="brand-copy">
-            <small>Plant Guide</small>
+            <small>Plant &amp; Garden</small>
             <strong>harunami plant base</strong>
           </span>
         </a>
-        <nav class="nav-links">
-          <a class="active" href="./index.html">Home</a>
-          <a href="./articles/kuromatsu-pruning.html">Articles</a>
+        <nav class="nav">
+          <a class="is-active" href="./index.html">ホーム</a>
+          <a href="#articles">記事</a>
         </nav>
       </div>
     </header>
 
-    <div class="site-shell">
-      <section class="hero panel">
+    <main class="shell">
+      <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Garden & Plant Notes</p>
-          <h1>植物のことを、やさしく、順番に。</h1>
-          <p>
-            harunami plant base
-            は、植木・家庭菜園・庭づくりの基本を、専門知識のない愛好家にも読みやすく整理する小さな植物サイトです。案内役は、いつもはるにゃさん。植物ホルモンの入門と、黒松の季節管理をそろえて読めるようにしています。
+          <span class="hero-eyebrow">🌱 やさしい植物と庭の手帖</span>
+          <h1>植物のことを、<br /><span class="accent">やさしく、順番に。</span></h1>
+          <p class="hero-lead">
+            植木・家庭菜園・庭づくりの「なぜ？」を、専門知識がなくても上から読み進めるだけでわかるように整理する、小さな植物サイトです。むずかしい言葉は、ねこの<strong>はるにゃさん</strong>がとなりでかみくだいてくれます。
           </p>
-          <div class="hero-points">
-            <span class="chip">植木</span>
-            <span class="chip">家庭菜園</span>
-            <span class="chip">庭づくり</span>
-            <span class="chip">やさしい解説</span>
+          <div class="tag-row">
+            <span class="tag">🌳 植木・剪定</span>
+            <span class="tag">🥕 家庭菜園</span>
+            <span class="tag">🏡 庭づくり・造園</span>
           </div>
         </div>
-
-        <div class="hero-visual">
-          <section class="mascot-card">
-            <div class="mascot-frame">
-              <img
-                src="./harunyasan.jpg"
-                alt="harunami plant baseの案内役、はるにゃさん"
-              />
-            </div>
-          </section>
-          <section class="mini-note">
-            <strong>はるにゃさんからひとこと</strong>
-            <p>
-              「難しい言葉は、まず雰囲気からつかめば大丈夫。育ち方の仕組みがわかると、剪定の見え方がぐっと変わるよ。」
-            </p>
-          </section>
+        <div class="hero-mascot">
+          <img src="./assets/images/harunyasan-main.png" alt="案内役のねこ、はるにゃさん" />
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="articles">
         <div class="section-head">
-          <div>
-            <p class="eyebrow">Articles</p>
-            <h2>公開中の記事</h2>
-          </div>
-          <p class="label">トップページから記事へ移動できます</p>
+          <h2 class="rounded">記事を読む</h2>
+          <span class="label">トップページから各記事へ進めます</span>
         </div>
 
-        <div class="article-list">
-          <a class="article-card" href="./articles/kuromatsu-pruning.html">
-            <div class="article-thumb">
-              <img
-                src="./assets/images/kuromatsu-year-calendar.png"
-                alt="はるにゃさんが黒松の年間管理を説明する図解"
-              />
-            </div>
-            <div class="article-card-body">
-              <div class="meta-row">
-                <span class="meta-pill">庭木の剪定</span>
-                <span class="meta-pill">黒松</span>
-                <span class="meta-pill">時期別管理</span>
-              </div>
-              <h3>黒松の剪定と年間管理</h3>
-              <p>
-                春のみどり摘み、夏の管理、秋のもみあげ、冬の透かし剪定までを、季節の流れに沿ってやさしく整理した黒松の入門記事です。
-              </p>
-              <span class="link-row">記事を読む →</span>
-            </div>
-          </a>
-
+        <div class="card-list">
           <a class="article-card" href="./articles/plant-hormones-pruning.html">
             <div class="article-thumb">
               <img
                 src="./assets/images/plant-hormones-overview.png"
-                alt="はるにゃさんが植物の5大ホルモンを説明する図解"
+                alt="はるにゃさんが5大植物ホルモンを紹介する図解"
               />
             </div>
             <div class="article-card-body">
-              <div class="meta-row">
-                <span class="meta-pill">植物の基本</span>
-                <span class="meta-pill">剪定の考え方</span>
-                <span class="meta-pill">一般向け</span>
+              <div class="pill-row">
+                <span class="pill">植物のしくみ</span>
+                <span class="pill">剪定の考え方</span>
+                <span class="pill">はじめての人へ</span>
               </div>
               <h3>植物ホルモンと剪定</h3>
               <p>
-                5大ホルモンの基本から、果樹や庭木での働き、剪定で枝ぶりや芽の動きがどう変わるのかまでを、上から順にやさしく整理した入門記事です。
+                木はなぜ「切った場所」で次の伸び方が変わるの？　5つの植物ホルモンの役割から、果樹や庭木の剪定のコツまで、図解つきで上から順にやさしくたどります。
               </p>
-              <span class="link-row">記事を読む →</span>
+              <span class="read-more">はるにゃさんと読む →</span>
             </div>
           </a>
         </div>
       </section>
 
+      <section class="about">
+        <div class="about-avatar">
+          <img src="./assets/images/harunyasan-main.png" alt="はるにゃさんの顔" />
+        </div>
+        <div class="about-copy">
+          <h2 class="rounded">案内役・はるにゃさん</h2>
+          <p>
+            榛名山（はるなさん）のあたたかな雰囲気をモチーフにした、ねこのキャラクター。頭の榛名富士のぼうしと、おなかの榛名湖が目印です。このサイトでは、専門用語をかみくだく案内役として、各記事の図解やメモにいつも登場します。「むずかしそう」を「なるほど」に変えるのが、はるにゃさんの役目です。
+          </p>
+        </div>
+      </section>
+
       <footer class="footer">
-        <p>
-          plant articles for hobby gardeners, guided by Harunyasan.
-        </p>
+        <a class="brand" href="./index.html">
+          <span class="brand-icon"><img src="./assets/images/harunyasan-main.png" alt="" /></span>
+          <span class="brand-copy">
+            <strong>harunami plant base</strong>
+          </span>
+        </a>
+        <span>植木・家庭菜園・庭づくりを、はるにゃさんとやさしく。</span>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
