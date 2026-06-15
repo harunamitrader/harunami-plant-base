@@ -864,3 +864,191 @@ figure {
     padding: 12px 16px 14px;
   }
 }
+
+/* ===== pest & disease pages ===== */
+
+.subsection-title {
+  margin-top: 38px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--heading);
+}
+
+.subsection-title::before {
+  content: "";
+  width: 10px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--leaf) 0%, var(--leaf-deep) 100%);
+}
+
+.subsection-title.bug::before { background: linear-gradient(180deg, #e0a83a 0%, #c98a1d 100%); }
+.subsection-title.sick::before { background: linear-gradient(180deg, #6fb1e0 0%, #3f86b8 100%); }
+
+.pest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pest-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pest-card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.pest-thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--leaf-soft);
+  overflow: hidden;
+}
+
+.pest-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pest-card-body {
+  padding: 16px 18px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.pest-card-body h3 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-size: 1.16rem;
+  color: var(--heading);
+}
+
+.pest-card-body p {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.tag-bug,
+.tag-sick {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.tag-bug { background: #fbf0d8; color: #9a6a12; }
+.tag-sick { background: var(--sky-soft); color: #2f6f9c; }
+
+/* fact box on individual pages */
+.factbox {
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 8px 20px;
+}
+
+.factbox dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0;
+}
+
+.factbox dt {
+  padding: 12px 0;
+  padding-right: 16px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  color: var(--leaf-deep);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.factbox dd {
+  margin: 0;
+  padding: 12px 0;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+
+.factbox dl > dt:last-of-type,
+.factbox dl > dd:last-of-type {
+  border-bottom: 0;
+}
+
+/* prevent/exterminate split */
+.measure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.measure {
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+}
+
+.measure.prevent { background: var(--leaf-soft); border-color: #cfe6c4; }
+.measure.remove { background: var(--pink-soft); border-color: #f3d3e0; }
+
+.measure strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+}
+
+.measure.prevent strong { color: var(--leaf-deep); }
+.measure.remove strong { color: var(--pink); }
+
+.measure ul {
+  margin-top: 12px;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 8px;
+}
+
+.measure li { line-height: 1.8; color: var(--text); }
+
+@media (max-width: 640px) {
+  .pest-grid,
+  .measure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factbox dl {
+    grid-template-columns: 1fr;
+  }
+
+  .factbox dt {
+    padding-bottom: 2px;
+    border-bottom: 0;
+  }
+
+  .factbox dd {
+    padding-top: 2px;
+  }
+}
