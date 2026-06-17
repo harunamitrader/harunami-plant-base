@@ -327,7 +327,7 @@ h1, h2, h3 {
   overflow: hidden;
   border-right: 1px solid var(--line);
 }
-.article-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.article-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease; }
 .article-card:hover .article-thumb img { transform: scale(1.04); }
 
 .article-card-body { padding: 22px 24px; display: grid; align-content: start; gap: 12px; }
@@ -589,7 +589,7 @@ h1, h2, h3 {
 }
 .pest-card:hover { transform: translateY(-4px) rotate(-0.3deg); border-color: var(--leaf); box-shadow: var(--shadow-lg); }
 .pest-thumb { aspect-ratio: 16 / 10; background: var(--leaf-soft); overflow: hidden; border-bottom: 1px solid var(--line); }
-.pest-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pest-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .pest-card-body { padding: 16px 18px; display: grid; align-content: start; gap: 8px; }
 .pest-card-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; color: var(--heading); }
 .pest-card-body p { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.75; }
@@ -717,7 +717,7 @@ h1, h2, h3 {
   .hero-mascot { order: -1; }
   .hero-mascot img { width: 170px; }
   .article-card { grid-template-columns: 1fr; }
-  .article-thumb { aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--line); }
+  .article-thumb { aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--line); }
   .about { grid-template-columns: 1fr; text-align: center; padding: 24px 20px; }
   .about-avatar { width: 122px; height: 122px; }
 }
