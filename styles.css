@@ -634,7 +634,7 @@ h1, h2, h3 {
 .measure.prevent li::marker { color: var(--leaf); }
 .measure.remove li::marker { color: var(--clay); }
 
-/* ---------- 庭木キャラ図鑑 (zukan) ---------- */
+/* ---------- プラント アニマルズ (zukan) ---------- */
 .zukan-nav {
   position: sticky; top: 64px; z-index: 10;
   margin: 24px 0 8px; padding: 11px 14px;
