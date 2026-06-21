@@ -1,0 +1,3 @@
+
+# codex exec の一時ディレクトリ（認証情報を含むため追跡しない）
+.codex-tmp-imagegen/
