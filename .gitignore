@@ -1,3 +1,7 @@
 
 # codex exec の一時ディレクトリ（認証情報を含むため追跡しない）
 .codex-tmp-imagegen/
+
+# codex exec が作る一時物（再生成時）
+.tmp-codexhome/
+tmp_oneshot_*.txt
