@@ -320,10 +320,11 @@ h1, h2, h3 {
 }
 
 /* ---------- article cards (home) ---------- */
-.card-list { display: grid; gap: 18px; }
+.card-list { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .article-card {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   overflow: hidden;
   transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s, border-color 0.25s;
 }
@@ -336,12 +337,12 @@ h1, h2, h3 {
   aspect-ratio: 16 / 10;
   background: var(--leaf-soft);
   overflow: hidden;
-  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .article-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease; }
 .article-card:hover .article-thumb img { transform: scale(1.04); }
 
-.article-card-body { padding: 22px 24px; display: grid; align-content: start; gap: 12px; }
+.article-card-body { padding: 13px 15px 15px; display: grid; align-content: start; gap: 8px; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill {
   padding: 4px 11px;
@@ -355,8 +356,8 @@ h1, h2, h3 {
 .article-card-body h3 {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.34rem;
-  line-height: 1.5;
+  font-size: 1.02rem;
+  line-height: 1.45;
   color: var(--heading);
 }
 .article-card-body p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.85; }
@@ -727,8 +728,7 @@ h1, h2, h3 {
   .tag-row { justify-content: center; }
   .hero-mascot { order: -1; }
   .hero-mascot img { width: 170px; }
-  .article-card { grid-template-columns: 1fr; }
-  .article-thumb { aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--line); }
+  .card-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about { grid-template-columns: 1fr; text-align: center; padding: 24px 20px; }
   .about-avatar { width: 122px; height: 122px; }
 }
@@ -737,6 +737,10 @@ h1, h2, h3 {
   body { font-size: 15.5px; }
   .topbar-inner { height: 58px; }
   .brand-copy small { display: none; }
+  .card-list { gap: 12px; }
+  .article-card-body { padding: 11px 12px 13px; gap: 6px; }
+  .article-card-body h3 { font-size: 0.95rem; line-height: 1.4; }
+  .pill { font-size: 0.68rem; padding: 3px 9px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 4px; }
   .hormone-item { grid-template-columns: 1fr; gap: 8px; }
   .meow { grid-template-columns: 1fr; justify-items: center; text-align: center; }
