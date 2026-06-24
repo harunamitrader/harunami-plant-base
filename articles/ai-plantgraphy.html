@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI Plantgraphy は、スマホで撮った植物写真をAIで解析し、自分だけの植物図鑑を作れる無料のWebアプリ（PWA）。庭木・草花・鉢植えを写真と名前・特徴・手入れメモ付きで記録できます。できること・画面イメージ・必要なものをやさしく紹介。案内役ははるにゃさん。"
+    />
+    <meta name="theme-color" content="#f7faf3" />
+    <title>AI Plantgraphy ＝ スマホで作る自分だけの植物図鑑｜harunami plant base</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='50' font-size='48'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-icon"><img src="../assets/images/harunyasan-main.png" alt="" /></span>
+          <span class="brand-copy">
+            <small>Plant &amp; Garden</small>
+            <strong>harunami plant base</strong>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="shell shell-read">
+      <a class="crumb" href="../index.html">← ホームにもどる</a>
+
+      <header class="article-head">
+        <span class="kicker">ARTICLE 13 ・ 植物アプリ</span>
+        <h1>AI Plantgraphy<br />スマホで作る自分だけの植物図鑑</h1>
+        <p class="lead">
+          散歩で見つけた花、庭の木、もらった鉢植え——「これ何だっけ？」を、スマホで撮るだけでAIが調べて、<strong>自分だけの植物図鑑</strong>に残せる無料のWebアプリが <strong>AI Plantgraphy（エーアイ・プラントグラフィー）</strong> です。写真・名前・特徴・手入れメモをまとめて記録でき、あとから見返せます。どんなことができるのか、やさしく紹介します。
+        </p>
+        <div class="article-meta">
+          <span class="pill">植物アプリ</span>
+          <span class="pill">AI植物判定</span>
+          <span class="pill">無料・PWA</span>
+        </div>
+      </header>
+
+      <nav class="toc">
+        <strong>📱 もくじ</strong>
+        <ol>
+          <li><a href="#what">AI Plantgraphy ってなに？</a></li>
+          <li><a href="#overview">1枚でわかる仕組み</a></li>
+          <li><a href="#can">できること</a></li>
+          <li><a href="#screen">画面イメージ</a></li>
+          <li><a href="#who">こんな人にぴったり</a></li>
+          <li><a href="#need">使うのに必要なもの</a></li>
+          <li><a href="#link">使ってみる・ソースコード</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+        <h2 id="what">AI Plantgraphy ってなに？</h2>
+        <p>
+          AI Plantgraphy は、<strong>スマホで撮った植物写真をAIが解析して、植物の名前や特徴を推定し、自分だけの図鑑に記録できるWebアプリ</strong>です。庭木・草花・鉢植え・公園で見かけた植物などを、写真と名前、見えている特徴、手入れメモといっしょに残せます。
+        </p>
+        <p>
+          アプリのインストールは不要で、<strong>スマホのブラウザから開いてホーム画面に追加（PWA）</strong>すれば、ふつうのアプリのように使えます。写真はクラウドに預けず、<strong>解析と保存は自分の家のPCで行う</strong>のが特徴で、自分の記録を手元に置いておきたい人に向いています。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/apg-hero.webp" alt="AI Plantgraphy のヘッダーバナー画像" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図1</span>
+            <span>撮って・調べて・残す。スマホ1台で自分だけの植物図鑑が育っていきます。</span>
+          </figcaption>
+        </figure>
+
+        <h2 id="overview">1枚でわかる仕組み</h2>
+        <p>
+          むずかしそうに見えますが、使う側の操作は「<strong>撮る → 送る → 図鑑にたまる</strong>」だけ。下の1枚にぎゅっとまとめてあります。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/apg-overview.webp" alt="AI Plantgraphy の概要を1枚にまとめた図解。撮影、AI解析、図鑑への記録、オフライン閲覧などの流れを示す" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図2</span>
+            <span>スマホで撮影 → 自宅PCのAIが解析 → 結果を図鑑に記録、という流れです。</span>
+          </figcaption>
+        </figure>
+
+        <div class="meow">
+          <div class="meow-avatar"><img src="../assets/images/harunyasan-main.png" alt="" /></div>
+          <div class="meow-body">
+            <strong>🐾 はるにゃさんメモ</strong>
+            <p>写真をクラウドに送りっぱなしにしないで、<strong>自分の家のPCで調べて保存する</strong>のがこのアプリのこだわり。だから「植物の記録は自分の手元に置いておきたい」という人と相性がいいんだ。</p>
+          </div>
+        </div>
+
+        <h2 id="can">できること</h2>
+        <div class="points">
+          <strong>🌿 おもな機能</strong>
+          <ul>
+            <li>スマホで植物の写真を1〜3枚えらんで送信（右下のボタンから連続撮影もできる）</li>
+            <li>自宅PCのAIが植物名を推定し、<strong>候補・見えている特徴・不確実な点</strong>まで観察記録として保存</li>
+            <li>同じ種類の植物をまとめ、基本の特徴・見どころ・手入れメモを<strong>図鑑側に保存</strong></li>
+            <li>スマホから図鑑・観察記録・確認待ちを閲覧。<strong>一度開いたページはオフラインでも見返せる</strong></li>
+            <li>写真を自動で軽量化して、スマホ表示が重くなりすぎないように配慮</li>
+            <li>zipバックアップ、場所ラベル、AIモデルの選択にも対応</li>
+          </ul>
+        </div>
+
+        <h2 id="screen">画面イメージ</h2>
+        <p>
+          ホーム画面から撮影、解析待ちの確認、図鑑の閲覧まで、スマホだけで完結します。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/apg-screens.webp" alt="AI Plantgraphy のスマホ画面例。左がホーム画面、右が植物を追加する撮影画面" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図3</span>
+            <span>左：ホーム画面／右：植物を追加する画面。シンプルな操作で記録できます。</span>
+          </figcaption>
+        </figure>
+
+        <h2 id="who">こんな人にぴったり</h2>
+        <div class="points">
+          <strong>🌳 向いている人</strong>
+          <ul>
+            <li>庭やベランダの植物を、写真付きで整理したい</li>
+            <li>植物名はAIに調べてもらいつつ、<strong>自分の記録</strong>として残したい</li>
+            <li>なるべく写真をクラウドに預けず、<strong>自宅PC中心</strong>で使いたい</li>
+            <li>アプリのように使える、個人用のWebアプリを試してみたい</li>
+          </ul>
+        </div>
+
+        <h2 id="need">使うのに必要なもの</h2>
+        <p>
+          「自宅PCで解析する」しくみのため、はじめに少し準備が必要です（正直なところ、スマホだけで完結する一般アプリよりは手間がかかります）。
+        </p>
+        <div class="points">
+          <strong>🧰 必要なもの</strong>
+          <ul>
+            <li>Windows 11 のPC（解析と保存を担当）</li>
+            <li>Android または iPhone のスマホ（撮影・閲覧用）</li>
+            <li>Antigravity CLI（植物名を推定するAI。Googleアカウントのログインで利用可）</li>
+            <li>Tailscale（外出先から自宅PCへ安全につなぐため）と、Git・Python 3.11以上</li>
+          </ul>
+        </div>
+
+        <div class="meow">
+          <div class="meow-avatar"><img src="../assets/images/harunyasan-main.png" alt="" /></div>
+          <div class="meow-body">
+            <strong>🐾 はるにゃさんメモ</strong>
+            <p>準備のところはちょっと専門的だけど、リポジトリにWindows用のセットアップ手順（クイックスタート）が用意されているよ。一度組んでしまえば、あとはデスクトップのショートカットから起動するだけ。スマホからはふつうのアプリ感覚で使えるんだ。</p>
+          </div>
+        </div>
+
+        <h2 id="link">使ってみる・ソースコード</h2>
+        <p>
+          AI Plantgraphy は<strong>オープンソースで公開</strong>されています。共用フロント（入口）の画面は、PCがなくても下のリンクから開いてみられます（解析・保存を行うには上の準備が必要です）。
+        </p>
+        <div class="points">
+          <strong>🔗 リンク</strong>
+          <ul>
+            <li>共用フロント（アプリ画面）：<a href="https://harunamitrader.github.io/AI-Plantgraphy/app/" target="_blank" rel="noopener">harunamitrader.github.io/AI-Plantgraphy/app/</a></li>
+            <li>ソースコード・セットアップ手順（GitHub）：<a href="https://github.com/harunamitrader/AI-Plantgraphy" target="_blank" rel="noopener">github.com/harunamitrader/AI-Plantgraphy</a></li>
+          </ul>
+        </div>
+
+        <h2 id="summary">まとめ</h2>
+        <p>
+          AI Plantgraphy は、<strong>「スマホで撮る → 自宅PCのAIが調べる → 自分だけの図鑑にたまる」</strong>という流れで、植物の記録を手元に残せるWebアプリです。写真をクラウドに預けたくない人や、植物を写真付きでコツコツ整理したい人にぴったり。準備に少し手間はかかりますが、一度組めばスマホからアプリのように使えます。
+        </p>
+        <p>
+          このサイトの <a href="./zukan/index.html">プラント アニマルズ</a> で木の名前と特徴を眺めて、気になった植物は AI Plantgraphy で自分の図鑑に記録していく——そんな使い方もおすすめです。
+        </p>
+
+        <div class="next-card">
+          <p><strong>あわせて読みたい</strong><br />プラント アニマルズ ／ 似てる木の見分け方 ／ 庭木・苗木の植え方</p>
+          <a class="btn" href="../index.html">ホームへ →</a>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <a class="brand" href="../index.html">
+          <span class="brand-icon"><img src="../assets/images/harunyasan-main.png" alt="" /></span>
+          <span class="brand-copy"><strong>harunami plant base</strong></span>
+        </a>
+        <span>ARTICLE 13 ・ AI Plantgraphy</span>
+      </footer>
+    </main>
+  </body>
+</html>

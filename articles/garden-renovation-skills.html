@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="garden-renovation-skills は、庭・外構の現況写真と「こうしたい」という要望から、完成予想図・平面図・施主に渡せる提案ページまでをAIで一気通貫に生成する、造園・外構業者向けのCodexスキル集。3つのスキルの役割と使い方、出力イメージをやさしく紹介。案内役ははるにゃさん。"
+    />
+    <meta name="theme-color" content="#f7faf3" />
+    <title>garden-renovation-skills ＝ 写真と要望から庭の提案資料をAI生成｜harunami plant base</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='50' font-size='48'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-icon"><img src="../assets/images/harunyasan-main.png" alt="" /></span>
+          <span class="brand-copy">
+            <small>Plant &amp; Garden</small>
+            <strong>harunami plant base</strong>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="shell shell-read">
+      <a class="crumb" href="../index.html">← ホームにもどる</a>
+
+      <header class="article-head">
+        <span class="kicker">ARTICLE 14 ・ 庭づくりツール</span>
+        <h1>garden-renovation-skills<br />写真と要望から庭の提案資料をAI生成</h1>
+        <p class="lead">
+          「この殺風景な駐車スペースを、カーポートとタイル舗装でこう変えたい」——そんな<strong>現況写真と要望を渡すだけ</strong>で、<strong>完成予想図・平面図・施主に渡せる提案ページ</strong>までをAIが一気に作ってくれるのが <strong>garden-renovation-skills</strong> です。造園・外構業者さん向けの少し専門的なツールですが、「庭づくりがどこまでAIで形になるのか」を知るのにおもしろい題材なので紹介します。
+        </p>
+        <div class="article-meta">
+          <span class="pill">庭づくりツール</span>
+          <span class="pill">外構・造園</span>
+          <span class="pill">AI提案資料</span>
+        </div>
+      </header>
+
+      <nav class="toc">
+        <strong>🏡 もくじ</strong>
+        <ol>
+          <li><a href="#what">garden-renovation-skills ってなに？</a></li>
+          <li><a href="#overview">1枚でわかる全体像</a></li>
+          <li><a href="#skills">3つのスキルの役割</a></li>
+          <li><a href="#how">使い方はシンプル</a></li>
+          <li><a href="#output">出力イメージ</a></li>
+          <li><a href="#point">うれしいポイント・正直な限界</a></li>
+          <li><a href="#need">必要なもの</a></li>
+          <li><a href="#link">サンプル・ソースコード</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+        <h2 id="what">garden-renovation-skills ってなに？</h2>
+        <p>
+          garden-renovation-skills は、庭・外構の<strong>現況写真</strong>と「こうしたい」という<strong>自然言語の要望</strong>から、リフォームの提案資料をAIで生成する<strong>Codex（コーデックス）用のスキル集</strong>です。中心となるスキルに話しかけるだけで、<strong>完成予想図の生成 → 平面図の生成 → 提案ページの出力</strong>までが一気通貫で完結します。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/grs-hero.webp" alt="garden-renovation-skills のヘッダーバナー画像" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図1</span>
+            <span>写真と要望から、施主に渡せる提案資料までをAIで一気通貫に作るスキル集です。</span>
+          </figcaption>
+        </figure>
+
+        <h2 id="overview">1枚でわかる全体像</h2>
+        <p>
+          「何ができて、どう使うのか」を1枚にまとめました。案内役のはるにゃさんといっしょにどうぞ。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/grs-overview.webp" alt="garden-renovation-skills の全体像を1枚にまとめた図解。3つのスキル、メインの使い方の4ステップ、完成予想図から平面図・提案ページへの出力イメージ、必要環境、ポイントを示す" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図2</span>
+            <span>これは何か／3つのスキル／使い方の流れ／出力イメージまでが一目でわかります。</span>
+          </figcaption>
+        </figure>
+
+        <h2 id="skills">3つのスキルの役割</h2>
+        <div class="points">
+          <strong>🧩 3本セット</strong>
+          <ul>
+            <li><strong>garden-renovation-proposal（入口）</strong>：写真と要望を渡せば、提案ページまで仕上げるメインスキル。内部で下の2つを呼び出します。</li>
+            <li><strong>garden-renovation-visualizer</strong>：現況写真をもとに<strong>改修後の完成予想図</strong>を生成。建物やフェンスなど変えない部分は写真のまま残し、変えたい所だけを置き換えます。</li>
+            <li><strong>garden-renovation-siteplan</strong>：プランと完成予想図から、<strong>真上から見た外構の平面図</strong>を生成。ラベルや方位記号も図の中に描き込みます。</li>
+          </ul>
+        </div>
+
+        <h2 id="how">使い方はシンプル</h2>
+        <p>
+          むずかしい操作はありません。<strong>写真を添えて、やりたいことを言葉で伝えるだけ</strong>です。
+        </p>
+        <div class="points">
+          <strong>💬 こんな感じで頼むだけ</strong>
+          <ul>
+            <li>「この庭の写真で提案ページを作って。要望：2台用カーポートを設置して、タイル舗装にしたい。」</li>
+            <li>完成予想図・平面図の生成は<strong>内部で自動的に</strong>行われ、最後に提案ページ（HTML）が出てきます。</li>
+            <li>「完成予想図だけ」「平面図だけ作り直したい」といった<strong>単体での呼び出し</strong>もできます。</li>
+          </ul>
+        </div>
+
+        <h2 id="output">出力イメージ</h2>
+        <p>
+          実際の出力を見てみましょう。土の駐車スペースが、カーポート＋タイル舗装のモダンな外構に変わります。
+        </p>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/grs-before-after.webp" alt="土の駐車スペースの現況写真（BEFORE）と、2台用カーポート＋タイル舗装のモダン外構の完成予想図（AFTER）の比較" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図3</span>
+            <span>現況（BEFORE）と完成予想図（AFTER）。建物は残したまま、変えたい所だけ置き換えています。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="figure">
+          <div class="figure-frame">
+            <img src="../assets/images/grs-siteplan.webp" alt="AIが生成した外構の平面図。真上視点で、カーポートや植栽、タイル舗装の配置をラベル付きで示す" />
+          </div>
+          <figcaption>
+            <span class="fig-no">図4</span>
+            <span>真上から見た平面図（AI生成）。施主への説明用に、配置やラベルを描き込みます。</span>
+          </figcaption>
+        </figure>
+
+        <p>
+          最終成果物は <strong>1ページ完結の提案ページ（HTML）</strong>。BEFORE/AFTER比較スライダー付きで、フォルダごと渡せばオフラインでも閲覧できます。
+        </p>
+
+        <div class="meow">
+          <div class="meow-avatar"><img src="../assets/images/harunyasan-main.png" alt="" /></div>
+          <div class="meow-body">
+            <strong>🐾 はるにゃさんメモ</strong>
+            <p>完成予想図と平面図は、できあがった画像を<strong>そのまま提案ページに貼る</strong>仕組みなんだ。だから提案ページを作る段階でAIが絵を描き直して間違える、ということが起きにくいよ。金額や工期も、人が伝えた数字だけが載るようになっているんだ。</p>
+          </div>
+        </div>
+
+        <h2 id="point">うれしいポイント・正直な限界</h2>
+        <div class="measure-grid">
+          <div class="measure prevent">
+            <strong>🌿 うれしいポイント</strong>
+            <ul>
+              <li>写真ベースなので<strong>リアルな完成イメージ</strong>を出しやすい。</li>
+              <li>建物・窓・隣地など<strong>変えない部分は写真のまま保持</strong>。</li>
+              <li>平面図（概念図）まで自動。施主への説明がしやすい。</li>
+              <li>提案ページはモダンデザイン・スマホ対応・1ページ完結。</li>
+            </ul>
+          </div>
+          <div class="measure remove">
+            <strong>⚠️ 正直な限界</strong>
+            <ul>
+              <li>壁のテクスチャや葉の細部までは<strong>ピクセル単位で一致しない</strong>。</li>
+              <li>出力解像度の実用上限は<strong>約2K</strong>。</li>
+              <li>平面図は<strong>CAD図面の代替ではなく</strong>、説明用の概念図（寸法・縮尺は概算）。</li>
+              <li>一度に変える項目が多すぎると精度が下がるため、内部で段階に分けて処理。</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="need">必要なもの</h2>
+        <div class="points">
+          <strong>🧰 動かすのに必要</strong>
+          <ul>
+            <li>Codex CLI または Codex デスクトップアプリ</li>
+            <li>Codex の <strong>image_gen 機能</strong>が使えるプラン（CLI／App 共通）</li>
+            <li>スキルをコピーして導入（グローバル、またはプロジェクトローカル）</li>
+          </ul>
+        </div>
+
+        <h2 id="link">サンプル・ソースコード</h2>
+        <div class="points">
+          <strong>🔗 リンク</strong>
+          <ul>
+            <li>提案ページのサンプル：<a href="https://harunamitrader.github.io/harunami_AI_base/showcase/garden-carport-proposal/" target="_blank" rel="noopener">提案ページのサンプルを見る</a></li>
+            <li>ソースコード・使い方（GitHub）：<a href="https://github.com/harunamitrader/garden-renovation-skills" target="_blank" rel="noopener">github.com/harunamitrader/garden-renovation-skills</a></li>
+          </ul>
+        </div>
+
+        <h2 id="summary">まとめ</h2>
+        <p>
+          garden-renovation-skills は、<strong>現況写真と要望を渡すだけ</strong>で、<strong>完成予想図・平面図・提案ページ</strong>までをAIで一気通貫に作る、造園・外構業者さん向けのCodexスキル集です。打ち合わせのその場で「こう変わります」を見せたいときに役立ちます。細部の完全一致やCAD図面の代わりにはなりませんが、<strong>施主への説明用の提案資料を素早く形にする</strong>のが得意なツールです。
+        </p>
+        <p>
+          木そのものの育て方は <a href="./tree-planting.html">庭木・苗木の植え方</a>、木の名前や特徴を知りたいときは <a href="./zukan/index.html">プラント アニマルズ</a> もどうぞ。
+        </p>
+
+        <div class="next-card">
+          <p><strong>あわせて読みたい</strong><br />AI Plantgraphy ／ 庭木・苗木の植え方 ／ プラント アニマルズ</p>
+          <a class="btn" href="../index.html">ホームへ →</a>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <a class="brand" href="../index.html">
+          <span class="brand-icon"><img src="../assets/images/harunyasan-main.png" alt="" /></span>
+          <span class="brand-copy"><strong>harunami plant base</strong></span>
+        </a>
+        <span>ARTICLE 14 ・ garden-renovation-skills</span>
+      </footer>
+    </main>
+  </body>
+</html>
