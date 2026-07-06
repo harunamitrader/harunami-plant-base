@@ -67,11 +67,11 @@
     return Math.min(Math.floor(taps / C.tapsPerStage), 4);
   }
   function stageImageSrc(sp, idx) {
-    if (idx <= 0) return "assets/stages/stage1-seed.png";
-    if (idx === 1) return "assets/stages/stage2-sapling.png";
-    if (idx === 2) return `assets/stages/stage3-young-${sp.evergreen ? "evergreen" : "deciduous"}.png`;
-    if (idx === 3) return `assets/stages/stage4-mature-${sp.height}.png`;
-    return `assets/stages/stage5-bud-${sp.height}.png`;
+    if (idx <= 0) return "assets/stages/stage1-seed.webp";
+    if (idx === 1) return "assets/stages/stage2-sapling.webp";
+    if (idx === 2) return `assets/stages/stage3-young-${sp.evergreen ? "evergreen" : "deciduous"}.webp`;
+    if (idx === 3) return `assets/stages/stage4-mature-${sp.height}.webp`;
+    return `assets/stages/stage5-bud-${sp.height}.webp`;
   }
 
   // ---- にわ描画 ----
@@ -163,7 +163,7 @@
     doneTreeFallback.textContent = TYPE_EMOJI[sp.type];
     doneTreeFallback.hidden = true;
     doneTreeImg.style.visibility = "visible";
-    doneTreeImg.src = `assets/trees/${sp.name}.png`;
+    doneTreeImg.src = `assets/trees/${sp.name}.webp`;
     step1.hidden = false; step2.hidden = true; step3.hidden = true;
     spawnPetals(sp.bloomColor);
     doneOverlay.hidden = false;
@@ -186,7 +186,7 @@
 
   $("revealBtn").addEventListener("click", () => {
     const sp = byName[state.pot.species];
-    doneCharImg.src = `../assets/zukan-neko/${sp.name}-min-1shot-label.png`;
+    doneCharImg.src = `assets/chars/${sp.name}.webp`;
     doneName.textContent = `${sp.name}×${sp.animal} がやってきた！`;
     step1.hidden = true;
     step2.hidden = false;
@@ -239,7 +239,7 @@
       card.className = "zukan-card" + (rec ? "" : " locked");
       if (rec) {
         const img = document.createElement("img");
-        img.src = `../assets/zukan-neko/${s.name}-min-1shot-label.png`;
+        img.src = `assets/chars/${s.name}.webp`;
         img.alt = s.name;
         img.addEventListener("error", () => { img.remove(); card.insertAdjacentHTML("afterbegin", `<div class="q">${TYPE_EMOJI[s.type]}</div><div style="aspect-ratio:1"></div>`); });
         card.appendChild(img);
@@ -266,7 +266,7 @@
 
   function openDetail(s, rec) {
     detailCard.innerHTML = `
-      <img class="main" src="../assets/zukan-neko/${s.name}-min-1shot-label.png" alt="${s.name}" onerror="this.style.display='none'" />
+      <img class="main" src="assets/chars/${s.name}.webp" alt="${s.name}" onerror="this.style.display='none'" />
       <h3>${s.name}×${s.animal}</h3>
       <p class="sub">ゲット日: ${rec.date}　そだてた回数: ${rec.count}</p>
       <p class="appeal">${s.appeal}</p>
