@@ -114,9 +114,7 @@ const SPECIES = [
 ];
 
 const GAME_CONFIG = {
-  tapsPerStage: 20,
-  tapsToComplete: 100,
-  weightUnowned: 3,
-  weightSeasonal: 3,
+  tapsPerStage: 10,
+  tapsToComplete: 50,
   storageKey: "sodatetePA_v1",
 };

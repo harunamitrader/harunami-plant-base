@@ -21,23 +21,9 @@
     localStorage.setItem(C.storageKey, JSON.stringify(state));
   }
 
-  // ---- 抽選 ----
+  // ---- 抽選（完全ランダム・等確率）----
   function pickSpecies() {
-    const m = nowMonth();
-    const pool = [];
-    for (const s of SPECIES) {
-      let w = 1;
-      if (!state.collection[s.name]) w *= C.weightUnowned;
-      if (s.seasonMonths.includes(m)) w *= C.weightSeasonal;
-      pool.push([s.name, w]);
-    }
-    const total = pool.reduce((a, [, w]) => a + w, 0);
-    let r = Math.random() * total;
-    for (const [name, w] of pool) {
-      r -= w;
-      if (r <= 0) return name;
-    }
-    return pool[pool.length - 1][0];
+    return SPECIES[Math.floor(Math.random() * SPECIES.length)].name;
   }
   function plantNew() {
     state.pot = { species: pickSpecies(), taps: 0, done: false };
