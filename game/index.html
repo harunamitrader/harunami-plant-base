@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="なぞの苗木に水をあげて育てると、プラントアニマルズがやってくる育成ゲーム。harunami plant base" />
+    <meta name="theme-color" content="#f7faf3" />
+    <title>そだてて！プラントアニマルズ｜harunami plant base</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='8' y='50' font-size='48'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="gtop">
+      <a class="gtop-back" href="../index.html" aria-label="harunami plant base へ">🌳</a>
+      <h1 class="gtop-title">そだてて！<span>プラントアニマルズ</span></h1>
+      <button class="gtop-count" id="zukanCount" data-tab-jump="zukan">🧸 0/10</button>
+    </header>
+
+    <main class="stage-wrap">
+      <!-- にわ -->
+      <section class="panel" id="panel-niwa">
+        <div class="pot-card" id="potCard">
+          <div class="sky-deco" aria-hidden="true"><span>☁️</span><span>☁️</span></div>
+          <div class="pot-stage" id="potStage">
+            <img id="potImage" alt="そだてている木" draggable="false" />
+            <div id="potFallback" class="pot-fallback" hidden>🌱</div>
+            <div id="fxLayer" class="fx-layer" aria-hidden="true"></div>
+          </div>
+          <div class="stage-label" id="stageLabel">たね・芽</div>
+          <div class="grow-meter" id="growMeter" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p class="tap-note" id="tapNote">タップして水をあげよう</p>
+        </div>
+
+        <div class="hint-bubble" id="hintBubble" hidden>
+          <span class="hint-icon">🔍</span>
+          <p id="hintText"></p>
+        </div>
+      </section>
+
+      <!-- ずかん -->
+      <section class="panel" id="panel-zukan" hidden>
+        <h2 class="zukan-head">プラントアニマルズ ずかん</h2>
+        <p class="zukan-sub" id="zukanSub"></p>
+        <div class="zukan-grid" id="zukanGrid"></div>
+        <div class="save-tools">
+          <button id="exportBtn">セーブを書き出す</button>
+          <button id="importBtn">セーブを読み込む</button>
+        </div>
+        <p class="zukan-link"><a href="../articles/zukan/index.html">🌿 くわしい庭木図鑑はこちら</a></p>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tab active" data-tab="niwa">🪴 にわ</button>
+      <button class="tab" data-tab="zukan">📖 ずかん</button>
+    </nav>
+
+    <!-- 完成オーバーレイ -->
+    <div class="overlay" id="doneOverlay" hidden>
+      <div class="petals" id="petalLayer" aria-hidden="true"></div>
+      <div class="done-card" id="doneCard">
+        <p class="done-kicker" id="doneKicker">花がさいた！</p>
+        <div class="done-tree"><img id="doneTreeImg" alt="" draggable="false" /><div id="doneTreeFallback" class="pot-fallback" hidden>🌸</div></div>
+        <div class="done-step" id="doneStep1">
+          <button class="big-btn" id="revealBtn">だれか来たみたい…！</button>
+        </div>
+        <div class="done-step" id="doneStep2" hidden>
+          <div class="char-pop"><img id="doneCharImg" alt="" draggable="false" /></div>
+          <p class="done-name" id="doneName"></p>
+          <button class="big-btn" id="getBtn">ゲット！</button>
+        </div>
+        <div class="done-step" id="doneStep3" hidden>
+          <p class="done-appeal" id="doneAppeal"></p>
+          <div class="done-actions">
+            <button class="sub-btn" id="shareBtn">🐦 じまんする</button>
+            <button class="big-btn" id="nextBtn">つぎの苗木をうえる 🌱</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ずかん詳細モーダル -->
+    <div class="overlay" id="detailOverlay" hidden>
+      <div class="detail-card" id="detailCard"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
