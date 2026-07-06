@@ -149,7 +149,7 @@
     doneTreeFallback.textContent = TYPE_EMOJI[sp.type];
     doneTreeFallback.hidden = true;
     doneTreeImg.style.visibility = "visible";
-    doneTreeImg.src = `assets/trees/${sp.name}.webp`;
+    doneTreeImg.src = `assets/trees/${sp.name}.webp?v=3`;
     step1.hidden = false; step2.hidden = true; step3.hidden = true;
     spawnPetals(sp.bloomColor);
     doneOverlay.hidden = false;
